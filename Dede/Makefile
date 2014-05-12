@@ -5,7 +5,7 @@
 ## Login   <boucha_q@epitech.net>
 ## 
 ## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
-## Last update Mon May 12 16:50:18 2014 daniel_d
+## Last update Mon May 12 18:06:57 2014 daniel_d
 ##
 
 ## -------------- init ------------- ##
@@ -21,7 +21,30 @@ CFLAGS	+= -Wall -Wextra -Werror
 
 LNAME	= lib/libmy.a
 
-LSRC	= lib/my/*.c
+LSRC	= lib/my/my_putchar.c \
+        lib/my/my_strlen.c \
+        lib/my/my_putstr.c \
+        lib/my/my_put_nbr.c \
+        lib/my/my_put_nbr_rec.c \
+        lib/my/my_putnbr_base.c \
+        lib/my/my_putnbr_base_rec.c \
+        lib/my/my_put_nbru.c \
+        lib/my/my_getnbr.c \
+        lib/my/my_revstr.c \
+        lib/my/my_strcmp.c \
+        lib/my/my_strdup.c \
+        lib/my/my_str_to_wordtab.c \
+        lib/my/my_format.c \
+        lib/my/my_format2.c \
+        lib/my/my_format3.c \
+        lib/my/my_printf.c \
+        lib/my/my_strdup.c \
+        lib/my/my_needposchar.c \
+        lib/my/get_next_line.c \
+        lib/my/my_concat_str.c \
+        lib/my/my_epur_str.c \
+        lib/my/my_pow.c \
+        lib/my/my_nmatch.c \
 
 LOBJ    = $(LSRC:.c=.o)
 

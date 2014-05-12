@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Mon May 12 17:25:55 2014 le-franc
+** Last update Mon May 12 17:47:08 2014 daniel_d
 */
 
 #include "../include/my.h"
@@ -44,17 +44,18 @@ int     my_prompt(char **env)
   my_putstr("&>");
   while ((buff = my_read()) != NULL)
     {
+      /*
       while (cmd[n] != NULL)
         {
           if (cmd[n + 1] == NULL)
             cmd[n][my_strlen(cmd[n]) -1] = 0;
           n++;
         }
-      if (buff[0] != '\0')
-        my_putstr("\n");
+      */ /*       utilité ?      */
+      if (buff[0] == '\0')
+        my_putchar('\n');
       my_commande(path, cmd[0]);
       my_putstr("&>");
     }
-  my_putstr("exit\n");
   return (0);
 }
