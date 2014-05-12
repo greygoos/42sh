@@ -5,8 +5,15 @@
 ** Login   <boucha_q@epitech.net>
 **
 ** Started on  Fri Oct 11 10:50:43 2013 boucha_q
-** Last update Mon Apr 14 13:54:42 2014 bouchard alexandre
+** Last update Mon May 12 17:22:56 2014 le-franc
 */
+
+#ifndef MY_H
+#define MY_H
+
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
 void	my_putchar(char c);
 int	my_isneg(int nb);

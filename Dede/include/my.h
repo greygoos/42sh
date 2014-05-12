@@ -5,8 +5,15 @@
 ** Login   <boucha_q@epitech.net>
 **
 ** Started on  Fri Oct 11 10:50:43 2013 boucha_q
-** Last update Mon Apr 14 13:54:42 2014 bouchard alexandre
+** Last update Mon May 12 17:36:09 2014 le-franc
 */
+
+#ifndef MY_H_
+#define MY_H_
+
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
 void	my_putchar(char c);
 int	my_isneg(int nb);
@@ -22,3 +29,5 @@ int     my_getnbr(char *str);
 char    *my_strdup(char *src);
 int     my_str_isalpha(char *str);
 char    *my_strncat(char *dest, char *src, int f);
+
+#endif

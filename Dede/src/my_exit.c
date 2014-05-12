@@ -5,10 +5,11 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Apr 21 10:04:54 2014 daniel_d
-** Last update Fri May  9 15:30:07 2014 le-franc
+** Last update Mon May 12 17:26:29 2014 le-franc
 */
 
-#include "../include/my_read.h"
+#include "../include/mysh.h"
+#include "../include/my.h"
 
 int	my_exit(char *buffer)
 {

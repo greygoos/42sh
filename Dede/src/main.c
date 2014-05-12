@@ -5,11 +5,11 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 15:50:50 2014 daniel_d
-** Last update Mon May 12 16:52:19 2014 daniel_d
+** Last update Mon May 12 17:24:09 2014 le-franc
 */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "../include/my.h"
+#include "../include/mysh.h"
 
 int	shmain(char **env)
 {
