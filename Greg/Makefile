@@ -5,7 +5,7 @@
 ## Login   <boucha_q@epitech.net>
 ## 
 ## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
-## Last update Mon May 12 16:50:18 2014 daniel_d
+## Last update Mon May 12 18:26:20 2014 le-franc
 ##
 
 ## -------------- init ------------- ##
@@ -21,27 +21,26 @@ CFLAGS	+= -Wall -Wextra -Werror
 
 LNAME	= lib/libmy.a
 
-LSRC	= lib/my/*.c
+LSRC	= lib/*.c
 
 LOBJ    = $(LSRC:.c=.o)
 
 # ------------ programme ----------- ##
 
-NAME	= 42sh
+NAME	= 	42sh
 
-SRC	= src/main.c \
-	src/my_cd.c \
-	src/my_echo.c \
-	src/my_exit.c \
-	src/my_signal.c \
+SRC	= 	src/main.c \
+		src/my_cd.c \
+		src/my_echo.c \
+		src/my_exit.c \
+		src/my_signal.c
 
+OBJ	= 	$(SRC:.c=.o)
 
-OBJ	= $(SRC:.c=.o)
+all	: 	$(NAME) $(LNAME)
 
-all	: $(NAME) $(LNAME)
-
-$(LNAME)	: $(LOBJ)
-	@ar rc $(LNAME) $(LOBJ)
+$(LNAME): $(LOBJ)
+	@ar rc $(LNAME) $(LSRC) $(LOBJ)
 	@cp lib/my/my.h include/
 	@echo -e "\E[33;32m<############## Compilation lib ##############>\E[33;0m"
 

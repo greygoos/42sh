@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Jan  6 09:25:19 2014 daniel_d
-** Last update Mon May 12 17:27:11 2014 le-franc
+** Last update Mon May 12 18:19:19 2014 le-franc
 */
 
 #include <sys/types.h>
@@ -14,8 +14,8 @@
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/resource.h>
-#include "../Lib/include/my.h"
-#include "../Lib/include/mysh.h"
+#include "../include/my.h"
+#include "../include/mysh.h"
 
 void	get_sigall()
 {

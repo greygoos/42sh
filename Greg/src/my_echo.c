@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Apr 23 09:08:51 2014 daniel_d
-** Last update Mon May 12 17:25:22 2014 le-franc
+** Last update Mon May 12 18:17:51 2014 le-franc
 */
 
 #include "../include/mysh.h"
@@ -129,6 +129,7 @@ int	my_optn_e_maj(char *buffer)
 	}
       i++;
     }
+  return (0);
 }
 
 int	my_optn_e_min(char *buffer)
@@ -173,9 +174,10 @@ int	my_echo(char *buffer)
     my_optn_e_maj(buffer);
   if (optn != 5 && optn != 6 && optn != 7 && optn != 8)
     my_putchar('\n');
+  return (0);
 }
 
-int     main(int ac, char **av)
+/*int     main(int ac, char **av)
 {
   int   r;
   char  *buffer;
@@ -194,3 +196,4 @@ int     main(int ac, char **av)
         return (0);
     }
 }
+*/

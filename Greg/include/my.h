@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 **
 ** Started on  Fri Oct 11 10:50:43 2013 boucha_q
-** Last update Mon May 12 18:00:20 2014 le-franc
+** Last update Mon May 12 18:15:26 2014 le-franc
 */
 
 #ifndef MY_H_
@@ -30,5 +30,9 @@ char    *my_strdup(char *);
 int     my_str_isalpha(char *);
 char    *my_strncat(char *, char *, int);
 int	my_strcmp(char *, char *);
+int     my_needposchar(char *, char);
+int	my_nmatch_bis(char *, char *, int);
+int	my_nmatch(char *, char *, int);
+int	my_printf(const char *, ...);
 
 #endif
