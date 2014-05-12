@@ -5,41 +5,60 @@
 ## Login   <boucha_q@epitech.net>
 ## 
 ## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
-## Last update Tue May  6 10:33:13 2014 le-franc
+## Last update Mon May 12 16:21:50 2014 daniel_d
 ##
 
-SRC=	src/main.c \
+## -------------- init ------------- ##
+
+CC	= gcc
+
+RM	= rm -f
+
+CFLAGS	+= -I ./include/ -L lib -lmy
+CFLAGS	+= -Wall -Wextra -Werror
+
+## -------------- lib -------------- ##
+
+LNAME	= lib/libmy.a
+
+LSRC	= lib/my/*.c
+
+LOBJ    = $(LSRC:.c=.o)
+
+# ------------ programme ----------- ##
+
+NAME	= 42sh
+
+SRC	= src/main.c \
 	src/my_read.c \
 	src/get_path.c \
 	src/my_path.c \
 	src/my_path_to_wordtab.c \
 	src/fill_func_path.c \
-	lib/my_strcmp.c \
-	lib/my_putchar.c \
-	lib/my_putstr.c \
-	lib/my_put_nbr.c \
-	lib/my_strlen.c \
-	lib/my_strcat.c
 
-OBJ=	$(SRC:.c=.o)
+OBJ	= $(SRC:.c=.o)
 
-CC=	gcc -g
+all	: $(NAME) $(LNAME)
 
-CFLAGS=	-I .
-CFLAGS += -Wall -Wextra
-RM=	rm -f
+$(LNAME)	: $(LOBJ)
+	@ar rc $(LNAME) $(LOBJ)
+	@cp lib/my/my.h include/
+	@echo -e "\E[33;32m<############## Compilation lib ##############>\E[33;0m"
 
-NAME=	mysh
+$(NAME)	: $(OBJ)
+	@$(CC) $(OBJ) -o $(NAME)
+	@echo -e "\E[33;32m<############## Compilation programme ##############>\E[33;0m"
 
-
-all:	$(NAME)
-
-$(NAME):	$(OBJ)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-clean:
+clean	:
 	$(RM) $(OBJ)
+	@echo -e "\E[33;32m<############## clean ##############>\E[33;0m"
 
-fclean:	clean
+fclean	: clean
 	$(RM) $(NAME)
+	@echo -e "\E[33;32m<############## fclean ##############>\E[33;0m"
 
-re:	fclean all
+re	: fclean all
+	@echo -e "\E[33;32m<############## re ##############>\E[33;0m"
+
+exe	: all clean
+	@echo -e "\E[33;32m<############## exe ##############>\E[33;0m"
