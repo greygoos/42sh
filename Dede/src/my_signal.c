@@ -5,21 +5,17 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Jan  6 09:25:19 2014 daniel_d
-** Last update Thu Jan 30 10:25:16 2014 daniel_d
+** Last update Mon May 12 17:27:11 2014 le-franc
 */
 
-#include <stdlib.h>
 #include <sys/types.h>
 #include <signal.h>
 #include <dirent.h>
 #include <sys/stat.h>
-#include <sys/wait.h>
 #include <sys/time.h>
 #include <sys/resource.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "../Lib/include/my.h"
-#include "../Lib/include/my_minishell.h"
+#include "../Lib/include/mysh.h"
 
 void	get_sigall()
 {

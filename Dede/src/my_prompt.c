@@ -5,8 +5,11 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Mon May 12 17:38:11 2014 daniel_d
+** Last update Mon May 12 17:47:08 2014 daniel_d
 */
+
+#include "../include/my.h"
+#include "../include/mysh.h"
 
 char    *my_read()
 {
