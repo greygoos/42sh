@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Mon May 12 15:53:26 2014 le-franc
-** Last update Mon May 12 17:32:08 2014 le-franc
+** Last update Mon May 12 17:58:23 2014 le-franc
 */
 
 #include <stdlib.h>
@@ -44,6 +44,7 @@ int	main(int, char **, char **);
 */
 
 char    *my_read();
+int	my_prompt(char **);
 
 /*
 ** my_cd.c
@@ -85,6 +86,6 @@ char    **my_path_to_wordtab(char *);
 */
 
 void	getsigall();
-int	sugnal_set();
+int	signal_set();
 
 #endif

@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 **
 ** Started on  Fri Oct 11 10:50:43 2013 boucha_q
-** Last update Mon May 12 17:36:09 2014 le-franc
+** Last update Mon May 12 18:00:20 2014 le-franc
 */
 
 #ifndef MY_H_
@@ -15,19 +15,20 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void	my_putchar(char c);
-int	my_isneg(int nb);
-int	my_put_nbr(int nb);
-int	my_swap(int *a, int*b);
-void	my_putstr(char *str);
-int	my_strlen(char *str);
-char	*my_strcpy(char *dest, char *src);
-char	*my_strncpy(char *dest, char *src, int nb);
-char	*my_revstr(char *str);
-char    *my_strcat(char *dest, char *src);
-int     my_getnbr(char *str);
-char    *my_strdup(char *src);
-int     my_str_isalpha(char *str);
-char    *my_strncat(char *dest, char *src, int f);
+void	my_putchar(char);
+int	my_isneg(int);
+int	my_put_nbr(int);
+int	my_swap(int *, int*);
+void	my_putstr(char *);
+int	my_strlen(char *);
+char	*my_strcpy(char *, char *);
+char	*my_strncpy(char *, char *, int);
+char	*my_revstr(char *);
+char    *my_strcat(char *, char *);
+int     my_getnbr(char *);
+char    *my_strdup(char *);
+int     my_str_isalpha(char *);
+char    *my_strncat(char *, char *, int);
+int	my_strcmp(char *, char *);
 
 #endif

@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 15:50:50 2014 daniel_d
-** Last update Mon May 12 17:24:09 2014 le-franc
+** Last update Mon May 12 17:56:04 2014 le-franc
 */
 
 #include "../include/my.h"
@@ -13,8 +13,9 @@
 
 int	shmain(char **env)
 {
-  my_signal();
+  signal_set();
   my_prompt(env);
+  return (0);
 }
 
 int	main(int ac, char **av, char **env)
@@ -24,7 +25,7 @@ int	main(int ac, char **av, char **env)
       printf("ERROR : no environement\n");
       return (-1);
     }
-  if (ac > 1 && strcmp("--help", av[1]) == 0)
+  if (ac > 1 && my_strcmp("--help", av[1]) == 0)
     printf("USAGE : %s [--help]\n", av[0]);
   else
     if (shmain(env) == -1)
