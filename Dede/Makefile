@@ -5,7 +5,7 @@
 ## Login   <boucha_q@epitech.net>
 ## 
 ## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
-## Last update Mon May 12 18:06:57 2014 daniel_d
+## Last update Mon May 12 18:09:23 2014 daniel_d
 ##
 
 ## -------------- init ------------- ##
@@ -14,37 +14,37 @@ CC	= gcc
 
 RM	= rm -f
 
-CFLAGS	+= -I ./include/ -L lib -lmy
+CFLAGS	+= -I ./include/ -L DDlib -lmy
 CFLAGS	+= -Wall -Wextra -Werror
 
 ## -------------- lib -------------- ##
 
-LNAME	= lib/libmy.a
+LNAME	= DDlib/DDlibmy.a
 
-LSRC	= lib/my/my_putchar.c \
-        lib/my/my_strlen.c \
-        lib/my/my_putstr.c \
-        lib/my/my_put_nbr.c \
-        lib/my/my_put_nbr_rec.c \
-        lib/my/my_putnbr_base.c \
-        lib/my/my_putnbr_base_rec.c \
-        lib/my/my_put_nbru.c \
-        lib/my/my_getnbr.c \
-        lib/my/my_revstr.c \
-        lib/my/my_strcmp.c \
-        lib/my/my_strdup.c \
-        lib/my/my_str_to_wordtab.c \
-        lib/my/my_format.c \
-        lib/my/my_format2.c \
-        lib/my/my_format3.c \
-        lib/my/my_printf.c \
-        lib/my/my_strdup.c \
-        lib/my/my_needposchar.c \
-        lib/my/get_next_line.c \
-        lib/my/my_concat_str.c \
-        lib/my/my_epur_str.c \
-        lib/my/my_pow.c \
-        lib/my/my_nmatch.c \
+LSRC	= DDlib/my/my_putchar.c \
+        DDlib/my/my_strlen.c \
+        DDlib/my/my_putstr.c \
+        DDlib/my/my_put_nbr.c \
+        DDlib/my/my_put_nbr_rec.c \
+        DDlib/my/my_putnbr_base.c \
+        DDlib/my/my_putnbr_base_rec.c \
+        DDlib/my/my_put_nbru.c \
+        DDlib/my/my_getnbr.c \
+        DDlib/my/my_revstr.c \
+        DDlib/my/my_strcmp.c \
+        DDlib/my/my_strdup.c \
+        DDlib/my/my_str_to_wordtab.c \
+        DDlib/my/my_format.c \
+        DDlib/my/my_format2.c \
+        DDlib/my/my_format3.c \
+        DDlib/my/my_printf.c \
+        DDlib/my/my_strdup.c \
+        DDlib/my/my_needposchar.c \
+        DDlib/my/get_next_line.c \
+        DDlib/my/my_concat_str.c \
+        DDlib/my/my_epur_str.c \
+        DDlib/my/my_pow.c \
+        DDlib/my/my_nmatch.c \
 
 LOBJ    = $(LSRC:.c=.o)
 
@@ -65,8 +65,8 @@ all	: $(NAME) $(LNAME)
 
 $(LNAME)	: $(LOBJ)
 	@ar rc $(LNAME) $(LOBJ)
-	@cp lib/my/my.h include/
-	@echo -e "\E[33;32m<############## Compilation lib ##############>\E[33;0m"
+	@cp DDlib/my/my.h include/
+	@echo -e "\E[33;32m<############## Compilation DDlib ##############>\E[33;0m"
 
 $(NAME)	: $(OBJ)
 	@$(CC) $(OBJ) -o $(NAME)
