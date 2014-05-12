@@ -5,7 +5,7 @@
 ## Login   <boucha_q@epitech.net>
 ## 
 ## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
-## Last update Mon May 12 16:21:50 2014 daniel_d
+## Last update Mon May 12 16:50:18 2014 daniel_d
 ##
 
 ## -------------- init ------------- ##
@@ -30,11 +30,11 @@ LOBJ    = $(LSRC:.c=.o)
 NAME	= 42sh
 
 SRC	= src/main.c \
-	src/my_read.c \
-	src/get_path.c \
-	src/my_path.c \
-	src/my_path_to_wordtab.c \
-	src/fill_func_path.c \
+	src/my_cd.c \
+	src/my_echo.c \
+	src/my_exit.c \
+	src/my_signal.c \
+
 
 OBJ	= $(SRC:.c=.o)
 

@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 15:50:50 2014 daniel_d
-** Last update Mon May 12 16:28:54 2014 daniel_d
+** Last update Mon May 12 16:52:19 2014 daniel_d
 */
 
 #include <stdlib.h>
@@ -13,8 +13,8 @@
 
 int	shmain(char **env)
 {
-  //my_signal();
-  //my_prompt(env);
+  my_signal();
+  my_prompt(env);
 }
 
 int	main(int ac, char **av, char **env)
