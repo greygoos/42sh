@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Thu Apr 24 14:09:45 2014 bouchard alexandre
-** Last update Mon May 12 15:36:52 2014 le-franc
+** Last update Mon May 12 15:41:12 2014 daniel_d
 */
 
 #include "../include/my_read.h"
@@ -42,8 +42,8 @@ int	prompt()
     {
       my_putstr("&>");
       buff = my_read();
-      //      my_putstr(buff);
-      //      puts("");
+      my_putstr(buff);
+      puts("");
     }
   return (0);
 }

@@ -5,11 +5,11 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Apr 23 09:08:51 2014 daniel_d
-** Last update Wed May  7 12:47:43 2014 daniel_d
+** Last update Mon May 12 17:25:22 2014 le-franc
 */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "../include/mysh.h"
+#include "../include/my.h"
 
 /*
 **  optn = options

@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 08:51:32 2014 bouchard alexandre
-** Last update Wed May  7 10:13:12 2014 le-franc
+** Last update Mon May 12 15:43:27 2014 daniel_d
 */
 
 #include "../include/my_read.h"
@@ -71,7 +71,7 @@ int     my_execfunk(char **path, char **cmd)
           my_putstr("$> Command not found.\n");
           exit(pid);
         }
-    }    
+    }
   wait(&pid);
   return (0);
 }
