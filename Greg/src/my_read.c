@@ -5,12 +5,12 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Thu Apr 24 14:09:45 2014 bouchard alexandre
-** Last update Fri May  9 15:28:09 2014 le-franc
+** Last update Mon May 12 15:36:52 2014 le-franc
 */
 
 #include "../include/my_read.h"
 
-/*char	*my_read()
+char	*my_read()
 {
   char	*buff;
   char	*tmp;
@@ -47,5 +47,3 @@ int	prompt()
     }
   return (0);
 }
-
-*/
