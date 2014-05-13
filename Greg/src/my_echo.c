@@ -5,16 +5,14 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Apr 23 09:08:51 2014 daniel_d
-** Last update Wed May  7 12:47:43 2014 daniel_d
+** Last update Tue May 13 11:53:07 2014 daniel_d
 */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "mysh.h"
 
 /*
-**  optn = options
 **  e = 1
-** E = 2
+**  E = 2
 **  n = 5
 */
 
@@ -103,63 +101,6 @@ int	check_start(char *buffer)
   return (i);
 }
 
-int	my_optn_e_maj(char *buffer)
-{
-  int	cote;
-  int	i;
-
-  cote = 0;
-  i = check_start(buffer);
-  while (buffer[i] != '\0')
-    {
-      if (buffer[i] == 34 && buffer[i - 1] != 92 && cote == 0)
-	cote = 1;
-      else if (buffer[i] == 34 && buffer[i - 1] != 92 && cote == 1)
-	cote = 0;
-      else
-	{
-	  if (cote == 0)
-	    {
-	      if (buffer[i] == 92)
-		i++;
-	      write(1, &buffer[i], 1);
-	    }
-	  else
-	    write(1, &buffer[i], 1);
-	}
-      i++;
-    }
-}
-
-int	my_optn_e_min(char *buffer)
-{
-  int	cote;
-  int	i;
-
-  cote = 0;
-  i = check_start(buffer);
-  while (buffer[i] != '\0')
-    {
-      if (buffer[i] == 34 && buffer[i - 1] != 92 && cote == 0)
-	cote = 1;
-      else if (buffer[i] == 34 && buffer[i - 1] != 92 && cote == 1)
-	cote = 0;
-      else
-	{
-	  if (cote == 0)
-	    {
-	      if (buffer[i] == 92)
-		i++;
-	      write(1, &buffer[i], 1);
-	    }
-	  else
-	    write(1, &buffer[i], 1);
-	}
-      i++;
-    }
-  return (0);
-}
-
 int	my_echo(char *buffer)
 {
   int	optn;
@@ -173,24 +114,5 @@ int	my_echo(char *buffer)
     my_optn_e_maj(buffer);
   if (optn != 5 && optn != 6 && optn != 7 && optn != 8)
     my_putchar('\n');
-}
-
-int     main(int ac, char **av)
-{
-  int   r;
-  char  *buffer;
-
-  if (((buffer = malloc(sizeof(buffer) * 50))) == NULL)
-    return (0);
-  r = 0;
-  while ((r = read(0, buffer, 49)) != -1)
-    {
-      r--;
-      while (r < 50)
-        buffer[r++] == '\0';
-      my_echo(buffer);
-      free(buffer);
-      if (((buffer = malloc(sizeof(buffer) * 50))) == NULL)
-        return (0);
-    }
+  return (0);
 }
