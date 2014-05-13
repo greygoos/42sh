@@ -1,0 +1,9 @@
+Alors j'aimerais que tu finisse ton unsetenv le plus rapidement
+possible pour que l'on implemente sa dans le 42.
+commande a faire pour ajouter des fichiers.
+git pull avant de faire quoi que ce soit !!
+
+git add *
+git commit -am "Ilias"
+git push
+git pull 
