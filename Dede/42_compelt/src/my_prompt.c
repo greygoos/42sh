@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Tue May 13 14:12:45 2014 daniel_d
+** Last update Tue May 13 14:49:55 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -42,8 +42,6 @@ char	**my_check_cmd(char *cmd, char **env)
     my_cd(cmd, env);
   else if (my_nmatch("echo", cmd, 4) == 0)
     my_echo(cmd);
-  else if (my_nmatch("exit", cmd, 4) == 0)
-    my_exit(cmd);
   else if (my_nmatch("setenv", cmd, 6) == 0)
     env = my_setenv(cmd, env);
   else if (my_nmatch("unsetenv", cmd, 8) == 0)
@@ -63,7 +61,9 @@ int     my_prompt(char **env)
     {
       if (cmd[0] == '\0')
         my_putstr("\n");
-      if ((env = my_check_cmd(cmd, env)) == NULL)
+      if (my_nmatch("exit", cmd, 4) == 0)
+	return (my_exit(cmd));
+      else if ((env = my_check_cmd(cmd, env)) == NULL)
 	return (-1);
       my_putstr(PROMPT);
     }

@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 15:50:50 2014 daniel_d
-** Last update Tue May 13 14:11:53 2014 daniel_d
+** Last update Tue May 13 14:51:07 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -18,8 +18,7 @@ void	usage(char *sh)
 
 int	shmain(char **env)
 {
-  my_prompt(env);
-  return (0);
+  return (my_prompt(env));
 }
 
 int	main(int ac, char **av, char **env)
@@ -32,7 +31,6 @@ int	main(int ac, char **av, char **env)
   if (ac > 1 && my_strcmp("--help", av[1]) == 0)
     usage(av[0]);
   else
-    if (shmain(env) == -1)
-      return (-1);
+    return (shmain(env));
   return (0);
 }
