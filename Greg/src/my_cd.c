@@ -5,10 +5,10 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Jan 29 09:55:26 2014 daniel_d
-** Last update Mon May 12 17:24:35 2014 le-franc
+** Last update Tue May 13 13:53:22 2014 daniel_d
 */
 
-#include "../include/mysh.h"
+#include "mysh.h"
 
 int	take_direction(char *home)
 {
@@ -32,15 +32,6 @@ int	take_direction(char *home)
   if (chdir(str) != 0)
     my_printf("42sh: cd: %s: No such file or directory\n", str);
   free(str);
-  return (0);
-}
-
-int	aff_directory(char *env, int pos)
-{
-  pos++;
-  while (env[pos] != '\0')
-    my_putchar(env[pos++]);
-  my_putchar('\n');
   return (0);
 }
 
@@ -88,23 +79,6 @@ int	my_gohome(char **env)
   return (-1);
 }
 
-char	*cpydirec(int l, char *str, char *buffer)
-{
-  int	i;
-
-  i = 0;
-  if ((str = malloc(sizeof(str) * my_strlen(buffer - l))) == NULL)
-    return (NULL);
-  while (buffer[l] != '\n' && buffer[l] != '\0')
-    {
-      str[i] = buffer[l];
-      i++;
-      l++;
-    }
-  str[i] = '\0';
-  return (str);
-}
-
 int	my_cd_exec(char *buffer)
 {
   int	l;
@@ -113,12 +87,12 @@ int	my_cd_exec(char *buffer)
   l = 3;
   if ((str = malloc(sizeof(str))) == NULL)
     return (-1);
-  if (my_strcmp("..\n", buffer) == 0)
+  if (my_strcmp("..", buffer) == 0)
     {
       if ((str = my_strdup("../")) == NULL)
 	return (-1);
     }
-  else if (my_strcmp("...\n", buffer) == 0)
+  else if (my_strcmp("...", buffer) == 0)
     {
       if ((str = my_strdup("../../")) == NULL)
 	return (-1);
@@ -136,12 +110,12 @@ int	my_cd_exec(char *buffer)
 
 int	my_cd(char *buffer, char **env)
 {
-  if (my_strcmp("cd -\n", buffer) == 0)
+  if (my_strcmp("cd -", buffer) == 0)
     {
       if (my_cd_tiret(env) == -1)
 	return (-1);
     }
-  else if (my_strcmp("cd\n", buffer) == 0)
+  else if (my_strcmp("cd", buffer) == 0)
     {
       if (my_gohome(env) == -1)
 	return (-1);

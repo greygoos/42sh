@@ -1,25 +1,36 @@
 ##
-## Makefile for Makefile in /home/boucha_q/rendu/PSU_2013_minishell1
+## Makefile for makefile in /home/daniel_d/Name_Prog
 ## 
-## Made by bouchard alexandre
-## Login   <boucha_q@epitech.net>
+## Made by daniel_d
+## Login   <daniel_d@epitech.net>
 ## 
-## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
-## Last update Tue May 13 13:21:57 2014 daniel_d
+## Started on  Sun Mar  9 23:33:38 2014 daniel_d
+## Last update Tue May 13 14:10:33 2014 daniel_d
 ##
 
-## -------------- init ------------- ##
-
-CC	= gcc
+CC 	= gcc
 
 RM	= rm -f
 
-CFLAGS	+= -Wall -Wextra -Werror
-CFLAGS	+= -I include/ -L DDlib -lmy
-
-## -------------- lib -------------- ##
-
 LNAME	= lib/libmy.a
+NAME	= 42sh
+
+NORMEC	= python ./norme/.norme.py -nocheat -verbose -score -libc src/*.c
+NORMEH	= python ./norme/.norme.py -nocheat -verbose -score -libc include/*.h
+
+CFLAGS	+= -Wall -Wextra
+CFLAGS	+= -I include/ -L lib -lmy
+
+SRC	= src/main.c \
+        src/my_prompt.c \
+        src/my_cd.c \
+        src/my_cdbis.c \
+        src/my_echo.c \
+        src/my_echobis.c \
+        src/my_exit.c \
+        src/my_signal.c \
+        src/my_setenv.c \
+        src/my_unsetenv.c \
 
 LSRC	= lib/my/my_putchar.c \
         lib/my/my_strlen.c \
@@ -42,58 +53,40 @@ LSRC	= lib/my/my_putchar.c \
         lib/my/my_needposchar.c \
         lib/my/get_next_line.c \
         lib/my/my_concat_str.c \
-        lib/my/my_epur_str.c \
-        lib/my/my_pow.c \
-        lib/my/my_nmatch.c \
-	lib/my/my_strcat.c \
-
-LOBJ    = $(LSRC:.c=.o)
-
-# ------------ programme ----------- ##
-
-NAME	= 42sh
-
-SRC	= src/main.c \
-	src/my_prompt.c \
-	src/my_cd.c \
-	src/my_cdbis.c \
-	src/my_echo.c \
-	src/my_echobis.c \
-	src/my_exit.c \
-	src/my_signal.c \
-	src/my_setenv.c \
-Tue May 13 13:21:56 2014	src/my_unsetenv.c \
+	lib/my/my_epur_str.c \
+	lib/my/my_pow.c \
+	lib/my/my_nmatch.c \
 
 OBJ	= $(SRC:.c=.o)
 
-all	: $(LNAME) $(NAME)
+LOBJ	= $(LSRC:.c=.o)
+
+all	: $(LNAME) $(NAME) 
 
 $(LNAME)	: $(LOBJ)
-	@cp lib/my/my.h include/
 	@ar rc $(LNAME) $(LOBJ)
-	@echo -e "\E[33;32m<############## Compilation lib ##############>\E[33;0m"
-
-lib	: $(LOBJ)
 	@cp lib/my/my.h include/
-	@ar rc $(LNAME) $(LOBJ)
-	@echo -e "\E[33;32m<############## Compilation lib ##############>\E[33;0m"
+	@echo -e "\E[33;32m<####################Compilation lib OK####################>\E[33;0m"
 
 $(NAME)	: $(OBJ)
-	@$(CC) $(OBJ) -o $(NAME)
-	@echo -e "\E[33;32m<############## Compilation programme ##############>\E[33;0m"
+	@$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
+	@echo -e "\E[33;32m<####################Compilation OK####################>\E[33;0m"
 
 clean	:
-	$(RM) $(OBJ)
-	$(RM) $(LOBJ)
-	@echo -e "\E[33;32m<############## clean ##############>\E[33;0m"
+	@$(RM) $(OBJ)
+	@$(RM) $(LOBJ)
+	@echo -e "\E[33;32m<####################make clean OK####################>\E[33;0m"
 
 fclean	: clean
-	$(RM) $(NAME)
-	$(RM) $(LOBJ)
-	@echo -e "\E[33;32m<############## fclean ##############>\E[33;0m"
-
-re	: fclean all
-	@echo -e "\E[33;32m<############## re ##############>\E[33;0m"
+	@$(RM) $(NAME)
+	@$(RM) $(LNAME)
+	@echo -e "\E[33;32m<####################make fclean OK####################>\E[33;0m"
 
 exe	: all clean
-	@echo -e "\E[33;32m<############## exe ##############>\E[33;0m"
+	@$(NORMEC)
+	@$(NORMEH)
+	@echo -e "\E[33;32m<####################make exe OK####################>\E[33;0m"
+
+re	: fclean all
+	@echo -e "\E[33;32m<####################make re OK####################>\E[33;0m"
+

@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 10:33:42 2014 bouchard alexandre
-** Last update Fri May  2 11:43:38 2014 le-franc
+** Last update Tue May 13 14:03:28 2014 daniel_d
 */
 
 #include "../include/my_read.h"
@@ -28,7 +28,6 @@ char    *fill_func_path(char *path, char *buff)
 
   j = 0;
   i = my_strlen_space(buff);
-
   if ((str = malloc(sizeof(*str) * (my_strlen(path) + i + 1))) == NULL)
     return (NULL);
   while (path[j] != '\0')

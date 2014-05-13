@@ -5,11 +5,10 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Apr 21 10:04:54 2014 daniel_d
-** Last update Mon May 12 17:26:29 2014 le-franc
+** Last update Tue May 13 14:49:26 2014 daniel_d
 */
 
-#include "../include/mysh.h"
-#include "../include/my.h"
+#include "mysh.h"
 
 int	my_exit(char *buffer)
 {
@@ -22,12 +21,13 @@ int	my_exit(char *buffer)
   l = 0;
   if ((str = malloc(sizeof(str) * (my_strlen(buffer) - 6))) == NULL)
     return (-1);
-  if (my_strcmp("exit\n", buffer) == 2)
+  if (my_strcmp("exit", buffer) == 2)
     returnval = 0;
   else
     {
       while (buffer[i] != ' ')
 	i++;
+      i++;
       while (buffer[i] != '\0')
 	str[l++] = buffer[i++];
       returnval = my_getnbr(str);

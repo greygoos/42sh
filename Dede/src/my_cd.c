@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Jan 29 09:55:26 2014 daniel_d
-** Last update Tue May 13 11:52:46 2014 daniel_d
+** Last update Tue May 13 13:53:22 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -87,12 +87,12 @@ int	my_cd_exec(char *buffer)
   l = 3;
   if ((str = malloc(sizeof(str))) == NULL)
     return (-1);
-  if (my_strcmp("..\n", buffer) == 0)
+  if (my_strcmp("..", buffer) == 0)
     {
       if ((str = my_strdup("../")) == NULL)
 	return (-1);
     }
-  else if (my_strcmp("...\n", buffer) == 0)
+  else if (my_strcmp("...", buffer) == 0)
     {
       if ((str = my_strdup("../../")) == NULL)
 	return (-1);
@@ -110,12 +110,12 @@ int	my_cd_exec(char *buffer)
 
 int	my_cd(char *buffer, char **env)
 {
-  if (my_strcmp("cd -\n", buffer) == 0)
+  if (my_strcmp("cd -", buffer) == 0)
     {
       if (my_cd_tiret(env) == -1)
 	return (-1);
     }
-  else if (my_strcmp("cd\n", buffer) == 0)
+  else if (my_strcmp("cd", buffer) == 0)
     {
       if (my_gohome(env) == -1)
 	return (-1);

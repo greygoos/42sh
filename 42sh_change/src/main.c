@@ -5,29 +5,32 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 15:50:50 2014 daniel_d
-** Last update Mon May 12 17:24:09 2014 le-franc
+** Last update Tue May 13 14:51:07 2014 daniel_d
 */
 
-#include "../include/my.h"
-#include "../include/mysh.h"
+#include "mysh.h"
+
+void	usage(char *sh)
+{
+  my_printf("Usage : %s [option]\n", sh);
+  my_printf("options :\n\t--help\n");
+}
 
 int	shmain(char **env)
 {
-  my_signal();
-  my_prompt(env);
+  return (my_prompt(env));
 }
 
 int	main(int ac, char **av, char **env)
 {
   if (env[0] == NULL)
     {
-      printf("ERROR : no environement\n");
+      my_printf("ERROR : no environement\n");
       return (-1);
     }
-  if (ac > 1 && strcmp("--help", av[1]) == 0)
-    printf("USAGE : %s [--help]\n", av[0]);
+  if (ac > 1 && my_strcmp("--help", av[1]) == 0)
+    usage(av[0]);
   else
-    if (shmain(env) == -1)
-      return (-1);
+    return (shmain(env));
   return (0);
 }

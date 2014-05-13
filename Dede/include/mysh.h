@@ -5,8 +5,11 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Mon May 12 15:53:26 2014 le-franc
-** Last update Tue May 13 12:07:24 2014 daniel_d
+** Last update Tue May 13 14:11:16 2014 daniel_d
 */
+
+#ifndef MYSH_H_
+# define MYSH_H_
 
 #include <sys/types.h>
 #include <signal.h>
@@ -21,65 +24,46 @@
 #include <sys/wait.h>
 #include "my.h"
 
-#ifndef MYSH_H_
-#define MYSH_H_
+#define PROMPT "$>"
 
-/* fillfunctpath.c */
-int     my_strlen_space(char *);
-char    *fill_func_path(char *, char *);
+void    usage(char *sh);
+int     shmain(char **env);
 
-/* get_path.c */
-int     my_match(char *, char *);
-char    *fill_path(char **);
-char    *get_path(char **);
-
-/* main.c */
-int	shmain(char **);
-int	main(int, char **, char **);
-
-/* my_prompt.c */
-char	**my_check_cmd(char *, char **);
-int	my_prompt(char **);
+int     my_prompt(char **env);
 char    *my_read();
+char    **my_check_cmd(char *cmd, char **env);
 
-/* my_cd.c */
-int     take_direction(char *);
-int     aff_directory(char *, int);
-int     my_cd_tiret(char **);
-int     my_gohome(char **);
-char    *cpydirec(int, char *, char *);
-int     my_cd_exec(char *);
-int     my_cd(char *, char **);
+/*
+** BUILTIN
+*/
 
-/* my_exit.c */
-int	my_exit(char *);
+int     my_cd(char *buffer, char **env);
+int     my_cd_exec(char *buffer);
+int     my_gohome(char **env);
+int     my_cd_tiret(char **env);
+int     take_direction(char *home);
+char    *cpydirec(int l, char *str, char *buffer);
+int     aff_directory(char *env, int pos);
 
-/* my_echo.c */
-int     check_optn(int optn, int opt);
-int     my_check(char c);
-int     parsing_echo(char *buffer);
-int     check_start(char *buffer);
 int     my_echo(char *buffer);
+int     check_start(char *buffer);
+int     parsing_echo(char *buffer);
+int     my_check(char c);
+int     check_optn(int optn, int opt);
 int     my_optn_e_maj(char *buffer);
 int     my_optn_e_min(char *buffer);
 
-/* my_path.c */
-char    **my_path(char **, char *);
-char    *test_access(char **);
-int     my_execfunk(char **, char **);
+int     my_exit(char *buffer);
 
-/* my_path_to_wordtab.c */
-int     count_line_path(char *);
-int     count_long_line_path(char *, int);
-char    **fill_tab_path(char *, int, int, int);
-char    **my_path_to_wordtab(char *);
+void    get_sigall();
+int     signal_set();
 
-/* my_signal.c */
-void	getsigall();
-int	signal_set();
+/*
+** TEMPORAIRE
+*/
 
-/* test */
-char	**my_setenv(char *, char **);
-char	**my_unsetenv(char *, char **);
+void    my_exec(char *cmd, char **env);
+char    **my_setenv(char *cmd, char **env);
+char    **my_unsetenv(char *cmd, char **env);
 
 #endif

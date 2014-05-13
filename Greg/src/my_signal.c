@@ -5,21 +5,14 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Jan  6 09:25:19 2014 daniel_d
-** Last update Mon May 12 18:19:19 2014 le-franc
+** Last update Tue May 13 14:07:22 2014 daniel_d
 */
 
-#include <sys/types.h>
-#include <signal.h>
-#include <dirent.h>
-#include <sys/stat.h>
-#include <sys/time.h>
-#include <sys/resource.h>
-#include "../include/my.h"
-#include "../include/mysh.h"
+#include "mysh.h"
 
 void	get_sigall()
 {
-
+  my_printf("\n%s", PROMPT);
 }
 
 int	signal_set()

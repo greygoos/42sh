@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Thu Apr 24 14:09:45 2014 bouchard alexandre
-** Last update Mon May 12 15:47:49 2014 daniel_d
+** Last update Tue May 13 10:31:04 2014 daniel_d
 */
 
 #include "../include/my_read.h"
@@ -58,12 +58,14 @@ int	main()
   while ((buff = my_read()) != NULL)
     {
       my_putstr(buff);
+
       while (cmd[n])
         {
           if (cmd[n + 1] == NULL)
             cmd[n][my_strlen(cmd[n]) -1] = 0;
           n++;
         }
+
       if (buff[0] != '\0')
 	my_putstr("\n");
       my_commande(path, cmd[0]);
