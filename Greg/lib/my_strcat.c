@@ -5,24 +5,26 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Tue Oct  8 09:33:20 2013 boucha_q
-** Last update Fri May  2 13:37:36 2014 le-franc
+** Last update Tue May 13 16:42:43 2014 bouchard alexandre
 */
 
+#include <stdlib.h>
 #include "my.h"
 
-char	*my_strcat(char *dest, char *src)
+char	*my_strcat(char *src, char *src1)
 {
+  char	*dest;
   int	i;
-  int	n;
+  int	j;
 
-  i = 0;
-  n = 0;
-  n = my_strlen(dest);
-  while ( src[i] != '\0')
-    {
-      dest [n] = src[i];
-      n = n + 1;
-      i = i + 1;
-    }
+  j = -1;
+  i = -1;
+  dest = malloc(sizeof(*dest) * (my_strlen(src) + my_strlen(src) + 1));
+  while (src[++j] != '\0')
+    dest[++i] = src[j];
+  j = -1;
+  while (src1[++j] != '\0')
+    dest[++i] = src1[j];
+  dest[++i] = '\0';
   return (dest);
 }
