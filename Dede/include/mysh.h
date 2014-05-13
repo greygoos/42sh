@@ -5,9 +5,16 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Mon May 12 15:53:26 2014 le-franc
-** Last update Mon May 12 17:45:51 2014 daniel_d
+** Last update Tue May 13 12:07:24 2014 daniel_d
 */
 
+#include <sys/types.h>
+#include <signal.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/resource.h>
+#include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -30,14 +37,12 @@ char    *get_path(char **);
 int	shmain(char **);
 int	main(int, char **, char **);
 
-/*
-** my_prompt.c
-*/
+/* my_prompt.c */
+char	**my_check_cmd(char *, char **);
+int	my_prompt(char **);
 char    *my_read();
 
-/*
-** my_cd.c
-*/
+/* my_cd.c */
 int     take_direction(char *);
 int     aff_directory(char *, int);
 int     my_cd_tiret(char **);
@@ -46,10 +51,17 @@ char    *cpydirec(int, char *, char *);
 int     my_cd_exec(char *);
 int     my_cd(char *, char **);
 
-/*
-** my_exit.c
-*/
+/* my_exit.c */
 int	my_exit(char *);
+
+/* my_echo.c */
+int     check_optn(int optn, int opt);
+int     my_check(char c);
+int     parsing_echo(char *buffer);
+int     check_start(char *buffer);
+int     my_echo(char *buffer);
+int     my_optn_e_maj(char *buffer);
+int     my_optn_e_min(char *buffer);
 
 /* my_path.c */
 char    **my_path(char **, char *);
@@ -64,6 +76,10 @@ char    **my_path_to_wordtab(char *);
 
 /* my_signal.c */
 void	getsigall();
-int	sugnal_set();
+int	signal_set();
+
+/* test */
+char	**my_setenv(char *, char **);
+char	**my_unsetenv(char *, char **);
 
 #endif

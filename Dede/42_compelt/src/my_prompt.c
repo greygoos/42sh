@@ -5,14 +5,14 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Tue May 13 11:57:00 2014 daniel_d
+** Last update Tue May 13 14:12:45 2014 daniel_d
 */
 
 #include "mysh.h"
 
 void	my_exec(char *cmd, char **env)
 {
-  printf("cmd = %s env[0] = %s\n", cmd, env[0]);
+  my_printf("exec : cmd = %s env[0] = %s\n", cmd, env[0]);
 }
 
 char    *my_read()
@@ -22,13 +22,12 @@ char    *my_read()
   int   rd;
 
   rd = 0;
-  if ((buff = malloc(sizeof(*buff) * 1)) == NULL)
-    return (NULL);
-  if ((tmp = malloc(sizeof(*tmp) * 2)) == NULL)
+  if ((buff = malloc(sizeof(*buff) * 1)) == NULL ||
+      (tmp = malloc(sizeof(*tmp) * 2)) == NULL)
     return (NULL);
   buff[0] = '\0';
   tmp[1] = '\0';
-  while ((rd = read(0, tmp, 1)) <= 0)
+  while ((rd = read(0, tmp, 1)) > 0)
     {
       if (tmp[0] == '\n')
         return (buff);
@@ -59,14 +58,14 @@ int     my_prompt(char **env)
   char  *cmd;
 
   signal_set();
-  my_putstr("&>");
+  my_putstr(PROMPT);
   while ((cmd = my_read()) != NULL)
     {
       if (cmd[0] == '\0')
-        my_putchar('\n');
+        my_putstr("\n");
       if ((env = my_check_cmd(cmd, env)) == NULL)
 	return (-1);
-      my_putstr("&>");
+      my_putstr(PROMPT);
     }
   return (0);
 }

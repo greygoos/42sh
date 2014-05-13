@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Thu Oct 10 14:50:55 2013 daniel_d
-** Last update Tue May 13 11:50:48 2014 daniel_d
+** Last update Thu Apr 24 10:50:26 2014 daniel_d
 */
 
 #ifndef MY_H_
@@ -55,6 +55,5 @@ char    *my_realloc(char *str, int size);
 int	my_pow(int nbr, int puissance);
 int     my_nmatch(char *s1, char *s2, int pos);
 int     my_nmatch_bis(char *s1, char *s2, int pos);
-char    *my_strncat(char *dest, char *src, int f);
 
 #endif
