@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Thu Oct 10 14:50:55 2013 daniel_d
-** Last update Thu Apr 24 10:50:26 2014 daniel_d
+** Last update Tue May 13 16:58:50 2014 le-franc
 */
 
 #ifndef MY_H_
@@ -14,6 +14,7 @@
 #define BUFFER_SIZE	10
 #include <stdarg.h>
 
+char	*my_strcat(char *, char *);
 void	my_putchar(char c);
 void    my_putstr(char *str);
 void	my_revstr(char *str);

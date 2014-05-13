@@ -5,10 +5,11 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Tue May 13 16:29:36 2014 le-franc
+** Last update Tue May 13 17:02:14 2014 le-franc
 */
 
 #include "mysh.h"
+#include "../include/my.h"
 
 void	my_exec(char *cmd, char **env)
 {
@@ -31,6 +32,7 @@ char    *my_read()
     {
       if (tmp[0] == '\n')
 	{
+	  buff = my_strcat(buff, '\0');
 	  return (buff);
 	}
       buff = my_strcat(buff, tmp);

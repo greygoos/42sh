@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Tue May 13 14:49:55 2014 daniel_d
+** Last update Tue May 13 17:00:15 2014 le-franc
 */
 
 #include "mysh.h"
@@ -31,7 +31,7 @@ char    *my_read()
     {
       if (tmp[0] == '\n')
         return (buff);
-      buff = strcat(buff, tmp);
+      buff = my_strcat(buff, tmp);
     }
   return (NULL);
 }
