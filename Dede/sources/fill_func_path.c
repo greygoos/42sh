@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 10:33:42 2014 bouchard alexandre
-** Last update Tue May 13 14:03:28 2014 daniel_d
+** Last update Tue May 13 16:24:52 2014 daniel_d
 */
 
 #include "../include/my_read.h"
@@ -40,4 +40,29 @@ char    *fill_func_path(char *path, char *buff)
     str[j++] = buff[i++];
   str[j] = '\0';
   return (str);
+}
+
+char    **my_path(char **env, char *buff)
+{
+  char  *path;
+  char  **tab_path;
+  inti;
+
+  i = 0;
+  tab_path = NULL;
+  path = get_path(env);
+  if (path == NULL)
+    my_putstr("path non remplis");
+  else
+    {
+      tab_path = my_path_to_wordtab(path);
+      while (tab_path[i] != '\0')
+        {
+          tab_path[i] = fill_func_path(tab_path[i], buff);
+          i++;
+        }
+      i = 0;
+      return (tab_path);
+    }
+  return (NULL);
 }
