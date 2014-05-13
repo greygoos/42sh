@@ -1,2 +1,0 @@
-je viens de finir les includes, je les ai mis dans tes fichier ainsi
-que dans les .c de ton dossier voila dis moi si sa marche ;) 
