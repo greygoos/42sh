@@ -5,7 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-## Last update Tue May 13 14:10:33 2014 daniel_d
+## Last update Tue May 13 16:34:37 2014 daniel_d
 ##
 
 CC 	= gcc
@@ -31,6 +31,8 @@ SRC	= src/main.c \
         src/my_signal.c \
         src/my_setenv.c \
         src/my_unsetenv.c \
+	src/my_command.c \
+	src/my_path_to_wordtab.c \
 
 LSRC	= lib/my/my_putchar.c \
         lib/my/my_strlen.c \

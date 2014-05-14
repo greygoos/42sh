@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Mon May 12 15:53:26 2014 le-franc
-** Last update Tue May 13 14:11:16 2014 daniel_d
+** Last update Tue May 13 16:50:54 2014 daniel_d
 */
 
 #ifndef MYSH_H_
@@ -59,10 +59,25 @@ void    get_sigall();
 int     signal_set();
 
 /*
+** EXEC CMD
+*/
+
+int     count_line_path(char *path);
+int     count_long_line_path(char *str, int j);
+char	**fill_tab_path(char *path, int c, int i, int j);
+char    **my_path_to_wordtab(char *path);
+
+int     my_tablen(char **tab);
+char    **my_path(char **path, char **env);
+char    *my_access(char **path, char *cmd);
+int     exec_cmd(char **tabcmd, char **env);
+int     my_exec_cmd(char *cmd, char **path, char **env);
+int     my_exec(char *cmd, char **env);
+
+/*
 ** TEMPORAIRE
 */
 
-void    my_exec(char *cmd, char **env);
 char    **my_setenv(char *cmd, char **env);
 char    **my_unsetenv(char *cmd, char **env);
 

@@ -5,15 +5,14 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
+<<<<<<< HEAD
 ** Last update Tue May 13 17:00:15 2014 le-franc
+=======
+** Last update Tue May 13 16:37:22 2014 daniel_d
+>>>>>>> b21663bfbd2832b340ba1f9b47953530bfa2d55f
 */
 
 #include "mysh.h"
-
-void	my_exec(char *cmd, char **env)
-{
-  my_printf("exec : cmd = %s env[0] = %s\n", cmd, env[0]);
-}
 
 char    *my_read()
 {
