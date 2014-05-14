@@ -1,81 +1,105 @@
 /*
-** my_str_to_wordtab.c for strtowordtab in /home/daniel_d/rendu
+** my_str_to_worktab.c for my_str_to_wordtab.c in /home/le-fra_g/rendu/Piscine-C-lib/my
 ** 
-** Made by daniel_d
-** Login   <daniel_d@epitech.net>
+** Made by le-fra_g
+** Login   <le-fra_g@epitech.net>
 ** 
-** Started on  Sat Jan  4 15:02:32 2014 daniel_d
-** Last update Wed May  7 16:20:05 2014 daniel_d
+** Started on  Tue Jan 28 16:32:11 2014 le-fra_g
+** Last update Wed May 14 10:47:23 2014 daniel_d
 */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "my.h"
 
-int	my_c_w(char *str)
+char	**my_tab(char **tab, char *str)
 {
-  int   i;
-  int   n;
+  int	i;
+  int	j;
+  int	k;
 
+  j = 0;
   i = 0;
-  n = 1;
-  while (str[i] != '\0' && str[i] != '\n')
+  k = 0;
+  while (k < my_strlen(str))
     {
-      if (str[i] == ' ' && str[i + 1] != '\0')
-        n++;
+      j = 0;
+      while (str[k + j] != 0 && str[k + j] != '\t' && str[k + j] != ' ')
+	j++;
+      tab[i] = malloc(sizeof(char*) * (j));
+      j=0;
+      while (str[k] != 0 && str[k] != '\t' && str[k] != ' ')
+	{
+	  tab[i][j] = str[k];
+	  k++;
+	  j++;
+	}
+      tab[i][j] = 0;
+      j = 0;
+      k++;
       i++;
     }
-  return (n);
-}
-
-int	my_c_c(char *str)
-{
-  int   i;
-
-  i = 0;
-  while ((str[i] != ' ') && (str[i] != '\0') && (str[i] != '\n'))
-    i++;
-  i = i + 1;
-  return (i);
-}
-
-char	**my_str_wordtab(char *str, int a, int b)
-{
-  char  **tab;
-  int   i;
-
-  i = 0;
-  if ((tab = malloc(sizeof(tab) * ((my_c_w(str) + 1)))) == NULL)
-    return (NULL);
-  while (str[i] != '\n' && str[i] != '\0')
-    {
-      if (str[i] == ' ' || str[i] == '\n')
-        {
-          while (str[i++] == ' ');
-	  i--;
-          a++;
-          b = 0;
-        }
-      if ((tab[a] = malloc(sizeof(*tab) * ((my_c_c(str + i) + 1)))) == NULL)
-	return (NULL);
-      while ((str[i] != ' ')  && (str[i] != '\n') && (str[i] != '\0'))
-        tab[a][b++] = str[i++];
-      tab[a][b] = '\0';
-    }
-  tab[a + 1] = NULL;
+  tab[i] = NULL;
   return (tab);
+}
+
+int	count_caract(char *str)
+{
+  int i;
+  int nb_caract;
+
+  i = 0;
+  nb_caract = 0;
+  while (str[i] != '\0')
+    {
+      if (str[i] != '\t' && str[i] != ' ')
+	{
+	  nb_caract++;
+	  i++;
+	}
+      else
+	i++;
+    }
+  return (nb_caract);
+}
+
+int	count_word(char *str)
+{
+  int i;
+  int j;
+
+  i = 0;
+  j = 0;
+  while (str[i] != 0)
+    {
+      if (str[i] == '\t' && str[i] == ' ')
+      j++;
+      i++;
+    }
+  j++;
+  return (j);
 }
 
 char	**my_str_to_wordtab(char *str)
 {
+  int nb_word;
+  int nb_caract;
   char **tab;
-  int a;
-  int b;
+  int i;
 
-  a = 0;
-  b = 0;
-  if (str == NULL)
-    return (NULL);
-  if ((tab = my_str_wordtab(str, a, b)) == NULL)
-    return (NULL);
+  i = 0;
+  nb_word = count_word(str);
+  nb_caract = count_caract(str);
+  tab = malloc(sizeof(*tab) * (nb_word + 1));
+  if (tab == NULL)
+    return (0);
+  while (nb_word != i)
+    {
+      tab[i] = malloc(sizeof(**tab) * (nb_caract + 1));
+      if (tab[i++] == NULL)
+	return (0);
+    }
+  tab[i] = NULL;
+  tab = my_tab(tab, str);
   return (tab);
 }

@@ -5,21 +5,10 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue May 13 15:47:53 2014 daniel_d
-** Last update Tue May 13 16:51:02 2014 daniel_d
+** Last update Wed May 14 11:01:26 2014 daniel_d
 */
 
 #include "mysh.h"
-
-int	my_tablen(char **tab)
-{
-  int	i;
-
-  i = 0;
-  while (tab[i] != NULL)
-    i++;
-  i--;
-  return (i);
-}
 
 char	**my_path(char **path, char **env)
 {
@@ -43,11 +32,14 @@ char	*my_access(char **path, char *cmd)
     return (cmd);
   else
     {
-      path[i] = strcat(path[i], cmd);
-      if (access(path[i], F_OK) == 0)
-	return (path[i]);
-      else
-	i++;
+      while (path[i] != NULL)
+	{
+	  path[i] = strcat(path[i], cmd);
+	  if (access(path[i], F_OK) == 0)
+	    return (path[i]);
+	  else
+	    i++;
+	}
     }
   return (NULL);
 }

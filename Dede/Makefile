@@ -5,7 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-## Last update Tue May 13 16:34:37 2014 daniel_d
+## Last update Wed May 14 11:13:23 2014 daniel_d
 ##
 
 CC 	= gcc
@@ -41,7 +41,7 @@ LSRC	= lib/my/my_putchar.c \
         lib/my/my_put_nbr_rec.c \
         lib/my/my_putnbr_base.c \
         lib/my/my_putnbr_base_rec.c \
-        lib/my/my_put_nbru.c \
+	lib/my/my_put_nbru.c \
         lib/my/my_getnbr.c \
         lib/my/my_revstr.c \
         lib/my/my_strcmp.c \
@@ -68,27 +68,27 @@ all	: $(LNAME) $(NAME)
 $(LNAME)	: $(LOBJ)
 	@ar rc $(LNAME) $(LOBJ)
 	@cp lib/my/my.h include/
-	@echo -e "\E[33;32m<####################Compilation lib OK####################>\E[33;0m"
+	@echo -e "\E[33;32m<#################### Compilation lib ####################>\E[33;0m"
 
 $(NAME)	: $(OBJ)
 	@$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
-	@echo -e "\E[33;32m<####################Compilation OK####################>\E[33;0m"
+	@echo -e "\E[33;32m<#################### Compilation lib ####################>\E[33;0m"
 
 clean	:
 	@$(RM) $(OBJ)
 	@$(RM) $(LOBJ)
-	@echo -e "\E[33;32m<####################make clean OK####################>\E[33;0m"
+	@echo -e "\E[33;32m<#################### make clean ####################>\E[33;0m"
 
 fclean	: clean
 	@$(RM) $(NAME)
 	@$(RM) $(LNAME)
-	@echo -e "\E[33;32m<####################make fclean OK####################>\E[33;0m"
+	@echo -e "\E[33;32m<#################### make fclean ####################>\E[33;0m"
 
 exe	: all clean
 	@$(NORMEC)
 	@$(NORMEH)
-	@echo -e "\E[33;32m<####################make exe OK####################>\E[33;0m"
+	@echo -e "\E[33;32m<#################### make exe ####################>\E[33;0m"
 
 re	: fclean all
-	@echo -e "\E[33;32m<####################make re OK####################>\E[33;0m"
+	@echo -e "\E[33;32m<#################### make re ####################>\E[33;0m"
 
