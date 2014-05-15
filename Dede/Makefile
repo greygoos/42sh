@@ -5,7 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-## Last update Wed May 14 11:13:23 2014 daniel_d
+## Last update Wed May 14 16:01:12 2014 le-franc
 ##
 
 CC 	= gcc
@@ -39,6 +39,7 @@ LSRC	= lib/my/my_putchar.c \
         lib/my/my_putstr.c \
         lib/my/my_put_nbr.c \
         lib/my/my_put_nbr_rec.c \
+	lib/my/my_strcat.c \
         lib/my/my_putnbr_base.c \
         lib/my/my_putnbr_base_rec.c \
 	lib/my/my_put_nbru.c \
