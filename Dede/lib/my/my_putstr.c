@@ -5,9 +5,10 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Thu Oct  3 18:07:56 2013 daniel_d
-** Last update Wed Feb 19 13:35:10 2014 daniel_d
+** Last update Fri May 16 10:17:28 2014 daniel_d
 */
 
+#include <stdlib.h>
 #include "my.h"
 
 void	my_putstr(char *str)
@@ -15,9 +16,10 @@ void	my_putstr(char *str)
   int a;
 
   a = 0;
-  while (str[a] != '\0')
-    {
-      my_putchar(str[a]);
-      a = a + 1;
-    }
+  if (str != NULL)
+    while (str[a] != '\0')
+      {
+	my_putchar(str[a]);
+	a = a + 1;
+      }
 }

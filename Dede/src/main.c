@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 15:50:50 2014 daniel_d
-** Last update Tue May 13 14:51:07 2014 daniel_d
+** Last update Wed May 14 15:46:20 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -28,8 +28,11 @@ int	main(int ac, char **av, char **env)
       my_printf("ERROR : no environement\n");
       return (-1);
     }
-  if (ac > 1 && my_strcmp("--help", av[1]) == 0)
-    usage(av[0]);
+  if (ac > 1 && my_strcmp("--help", av[1]) > 0)
+    {
+      usage(av[0]);
+      return (0);
+    }
   else
     return (shmain(env));
   return (0);

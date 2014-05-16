@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Jan  6 13:10:06 2014 daniel_d
-** Last update Mon Jan  6 13:10:59 2014 daniel_d
+** Last update Fri May 16 10:09:49 2014 daniel_d
 */
 
 #include <stdlib.h>
@@ -24,7 +24,7 @@ char    *my_concat_str(char *src, char *str)
   l = 0;
   a = (my_strlen(src) - 1);
   b = my_strlen(str);
-  if ((dest = malloc(sizeof(dest) * (a + b))) == NULL)
+  if ((dest = malloc(sizeof(*dest) * (a + b))) == NULL)
     return (0);
   while (a >= 0)
     {

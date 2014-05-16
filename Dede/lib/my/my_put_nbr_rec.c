@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue Dec 10 12:53:14 2013 daniel_d
-** Last update Wed Feb 19 13:33:43 2014 daniel_d
+** Last update Fri May 16 10:08:32 2014 daniel_d
 */
 
 #include "my.h"
@@ -17,7 +17,7 @@ int     my_put_nbr_rec(int nb)
       my_putchar('-');
       nb = -nb;
     }
-  if (nb >= 9)
+  if (nb > 9)
     {
       my_put_nbr_rec(nb / 10);
       my_put_nbr_rec(nb % 10);

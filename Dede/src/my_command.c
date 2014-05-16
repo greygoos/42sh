@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue May 13 15:47:53 2014 daniel_d
-** Last update Wed May 14 11:01:26 2014 daniel_d
+** Last update Fri May 16 14:36:23 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -34,7 +34,7 @@ char	*my_access(char **path, char *cmd)
     {
       while (path[i] != NULL)
 	{
-	  path[i] = strcat(path[i], cmd);
+	  path[i] = my_strcat(path[i], cmd);
 	  if (access(path[i], F_OK) == 0)
 	    return (path[i]);
 	  else

@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Tue May 13 16:37:22 2014 daniel_d
+** Last update Fri May 16 14:38:09 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -24,9 +24,13 @@ char    *my_read()
   tmp[1] = '\0';
   while ((rd = read(0, tmp, 1)) > 0)
     {
+      if (buff[0] == '\0' && tmp[0] == '\n')
+	return ("\n");
       if (tmp[0] == '\n')
         return (buff);
-      buff = strcat(buff, tmp);
+      buff = my_strcat(buff, tmp);
+      if (rd <= 0)
+	return ("\0");
     }
   return (NULL);
 }
@@ -54,9 +58,9 @@ int     my_prompt(char **env)
   my_putstr(PROMPT);
   while ((cmd = my_read()) != NULL)
     {
-      if (cmd[0] == '\0')
-        my_putstr("\n");
-      if (my_nmatch("exit", cmd, 4) == 0)
+      if (cmd[0] == '\n')
+        my_putstr("\0");
+      else if (my_nmatch("exit", cmd, 4) == 0)
 	return (my_exit(cmd));
       else if ((env = my_check_cmd(cmd, env)) == NULL)
 	return (-1);
