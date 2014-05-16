@@ -5,7 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-## Last update Tue May 13 14:10:33 2014 daniel_d
+## Last update Tue May 13 16:51:42 2014 le-franc
 ##
 
 CC 	= gcc
@@ -52,6 +52,7 @@ LSRC	= lib/my/my_putchar.c \
         lib/my/my_strdup.c \
         lib/my/my_needposchar.c \
         lib/my/get_next_line.c \
+	lib/my/my_strcat.c \
         lib/my/my_concat_str.c \
 	lib/my/my_epur_str.c \
 	lib/my/my_pow.c \

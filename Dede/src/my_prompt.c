@@ -5,10 +5,19 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
+<<<<<<< HEAD
 ** Last update Fri May 16 14:38:09 2014 daniel_d
+=======
+<<<<<<< HEAD
+** Last update Wed May 14 15:58:50 2014 le-franc
+=======
+** Last update Tue May 13 16:37:22 2014 daniel_d
+>>>>>>> b21663bfbd2832b340ba1f9b47953530bfa2d55f
+>>>>>>> e53b5f6cbbfce547e771c449abc8d3235eda917f
 */
 
 #include "mysh.h"
+#include "my.h"
 
 char    *my_read()
 {
@@ -29,8 +38,11 @@ char    *my_read()
       if (tmp[0] == '\n')
         return (buff);
       buff = my_strcat(buff, tmp);
+<<<<<<< HEAD
       if (rd <= 0)
 	return ("\0");
+=======
+>>>>>>> e53b5f6cbbfce547e771c449abc8d3235eda917f
     }
   return (NULL);
 }

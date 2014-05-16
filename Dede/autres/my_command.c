@@ -5,7 +5,11 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Wed Jan 22 16:08:58 2014 le-fra_g
+<<<<<<< HEAD
+** Last update Tue May 13 15:37:54 2014 le-franc
+=======
 ** Last update Tue May 13 15:45:42 2014 daniel_d
+>>>>>>> b21663bfbd2832b340ba1f9b47953530bfa2d55f
 */
 
 #include "mysh.h"
@@ -57,9 +61,9 @@ char	**my_path(char **path, char *cmd)
   return (path2);
 }
 
-char	**exec()
+char	**my_exec(char **environ)
 {
-  extern char **environ;
+  //extern char **environ;
   char *str;
   int   i;
   char **tab;
