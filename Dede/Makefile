@@ -5,11 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-<<<<<<< HEAD
-## Last update Fri May 16 14:41:23 2014 daniel_d
-=======
-## Last update Wed May 14 16:01:12 2014 le-franc
->>>>>>> e53b5f6cbbfce547e771c449abc8d3235eda917f
+## Last update Sat May 17 10:54:22 2014 daniel_d
 ##
 
 CC 	= gcc
@@ -33,12 +29,14 @@ SRC	= src/main.c \
         src/my_echobis.c \
         src/my_exit.c \
         src/my_signal.c \
-        src/my_setenv.c \
-        src/my_unsetenv.c \
-	src/my_unsetenvbis.c \
 	src/my_command.c \
 	src/my_path_to_wordtab.c \
 	src/my_list_to_tab.c \
+	src/bt/my_unsetenv.c \
+	src/bt/my_unsetenv_fct.c \
+	src/bt/my_setenv.c \
+	src/bt/my_setenv_fct.c \
+
 
 LSRC	= lib/my/my_putchar.c \
         lib/my/my_strlen.c \

@@ -1,19 +1,21 @@
 /*
-** my_unsetenvbis.c for unsetenv in /home/daniel_d/rendu/42/42sh/Dede/src
+** show_put.c for show and put in /home/aubry_f/rendu/42sh/setenv/src
 ** 
-** Made by daniel_d
-** Login   <daniel_d@epitech.net>
+** Made by aubry_f
+** Login   <aubry_f@epitech.net>
 ** 
-** Started on  Fri May 16 14:39:38 2014 daniel_d
-** Last update Fri May 16 14:42:34 2014 daniel_d
+** Started on  Sun May 11 21:41:01 2014 aubry_f
+** Last update Fri May 16 16:11:53 2014 aubry_f
 */
 
-#include "mysh.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "my.h"
 
 int     put_tail_list(t_list **list, char *envir)
 {
-  t_list        *new_elem;
-  t_list        *tmp;
+  t_list *new_elem;
+  t_list *tmp;
 
   if ((new_elem = malloc(sizeof(*new_elem))) == NULL)
     return (0);
@@ -36,12 +38,12 @@ int     put_tail_list(t_list **list, char *envir)
 
 void    show_list(t_list **list)
 {
-  t_list        *tmp;
+  t_list *tmp;
 
   tmp = *list;
-  while (tmp->envir != NULL)
+  while (tmp != NULL)
     {
-      my_printf("%s\n", tmp->envir);
+      printf("%s\n", tmp->envir);
       tmp = tmp->next;
     }
 }

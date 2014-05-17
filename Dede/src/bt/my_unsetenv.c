@@ -1,19 +1,21 @@
 /*
 ** my_unsetenv.c for unsetenv in /home/dumlup_i/rendu/PSU_2013_42h/unsetenv/src
-** 
+**
 ** Made by dumlup_i
 ** Login   <dumlup_i@epitech.net>
-** 
+**
 ** Started on  Wed May 14 18:46:22 2014 dumlup_i
-** Last update Fri May 16 14:40:57 2014 daniel_d
+** Last update Sat May 17 11:30:28 2014 daniel_d
 */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "mysh.h"
-
-int     name_test(t_list **list, char *name)
+/*
+int     match_test(t_list **list, char *name) // vérification dans la liste si name éxiste
 {
-  t_list	*tmp;
-  int	a;
+  t_list *tmp;
+  int   a;
   int   c;
 
   c = 1;
@@ -30,12 +32,12 @@ int     name_test(t_list **list, char *name)
     }
   return (0);
 }
-
-int     list_cancel(t_list **list, int c)
+*/
+int     list_cancel(t_list **list, int c) // suppression du maillon à la position c
 {
-  t_list	*tmp;
-  t_list	*tmp2;
-  int	count;
+  t_list *tmp;
+  t_list *tmp2;
+  int   count;
 
   count = 1;
   tmp = *list;
@@ -54,34 +56,39 @@ int     list_cancel(t_list **list, int c)
   return (0);
 }
 
-t_list     *unsetenv_list(char *name, char **env)
+int     unsetenv_main(char *name, char **env) // fonction principale
 {
-  t_list	*list;
+  t_list *list;
   int   c;
 
   list = NULL;
   c = 0;
   while (env[c] != NULL)
     put_tail_list(&list, env[c++]);
-  if ((c = name_test(&list, name)) != 0)
+  if (name[0] == '*')
+    {
+      list = NULL;
+      return (0);
+    }
+  if ((c = match_test(&list, name)) != 0)
     list_cancel(&list, c);
   else
     {
-      my_printf("%s does not exist in env\n", name);
-      return (NULL);
+      printf("%s does not exist in env\n", name);
+      return (0);
     }
   show_list(&list);
-  return (list);
+  return (0);
 }
-
-char	**my_unsetenv(char *str, char **env)
+/*
+int	main(int ac, char **av, char **env)
 {
-  t_list *list;
-
-  if ((list = malloc(sizeof(*list))) == NULL)
-    return (NULL);
-  if ((list = unsetenv_list(str, env)) == NULL)
-    return (NULL);
-  env = list_to_tab(list);
-  return (env);
+  if (ac != 2)
+    {
+      printf("Usage : ./unsetenv [string name]\n");
+      return (0);
+    }
+  unsetenv_main(av[1], env);
+  return (0);
 }
+*/
