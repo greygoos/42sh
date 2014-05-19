@@ -5,11 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-<<<<<<< HEAD
-## Last update Fri May 16 16:38:13 2014 le-franc
-=======
-## Last update Sat May 17 10:54:22 2014 daniel_d
->>>>>>> 6695157c3a92f3c63bf40c8185d1da71ae9b6959
+## Last update Wed May 14 16:01:12 2014 le-franc
 ##
 
 CC 	= gcc
@@ -33,14 +29,10 @@ SRC	= src/main.c \
         src/my_echobis.c \
         src/my_exit.c \
         src/my_signal.c \
+        src/my_setenv.c \
+        src/my_unsetenv.c \
 	src/my_command.c \
 	src/my_path_to_wordtab.c \
-	src/my_list_to_tab.c \
-	src/bt/my_unsetenv.c \
-	src/bt/my_unsetenv_fct.c \
-	src/bt/my_setenv.c \
-	src/bt/my_setenv_fct.c \
-
 
 LSRC	= lib/my/my_putchar.c \
         lib/my/my_strlen.c \
@@ -67,7 +59,6 @@ LSRC	= lib/my/my_putchar.c \
 	lib/my/my_epur_str.c \
 	lib/my/my_pow.c \
 	lib/my/my_nmatch.c \
-	lib/my/my_strcat.c \
 
 OBJ	= $(SRC:.c=.o)
 
