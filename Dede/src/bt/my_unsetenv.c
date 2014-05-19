@@ -5,7 +5,7 @@
 ** Login   <dumlup_i@epitech.net>
 **
 ** Started on  Wed May 14 18:46:22 2014 dumlup_i
-** Last update Sat May 17 11:30:28 2014 daniel_d
+** Last update Mon May 19 10:24:45 2014 bouchard alexandre
 */
 
 #include <stdio.h>
@@ -70,13 +70,14 @@ int     unsetenv_main(char *name, char **env) // fonction principale
       list = NULL;
       return (0);
     }
+  /*
   if ((c = match_test(&list, name)) != 0)
     list_cancel(&list, c);
   else
     {
       printf("%s does not exist in env\n", name);
       return (0);
-    }
+      }*/
   show_list(&list);
   return (0);
 }

@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue Apr 22 15:36:12 2014 daniel_d
-** Last update Fri May 16 13:59:38 2014 daniel_d
+** Last update Mon May 19 10:23:47 2014 bouchard alexandre
 */
 
 #include <stdio.h>
@@ -15,12 +15,11 @@ int	my_nmatch_bis(char *s1, char *s2, int pos)
 {
   int	i;
 
-  i = 0;
-  while (i <= pos && (s1[i] != '\0' && s2[i] != '\0'))
+  i = -1;
+  while (++i <= pos && (s1[i] != '\0' && s2[i] != '\0'))
     {
       if (s1[i] != s2[i])
 	return (-1);
-      ++i;
     }
   return (0);
 }
@@ -36,9 +35,9 @@ int	my_nmatch(char *s1, char *s2, int pos)
     return (-1);
   len1 = my_strlen(s1);
   len2 = my_strlen(s2);
-  if (len1 >= len2)
+  if (len2 >= len1)
     result = my_nmatch_bis(s1, s2, pos);
   else
-    result = my_nmatch_bis(s2, s1, pos);
+    return (-1);
   return (result);
 }

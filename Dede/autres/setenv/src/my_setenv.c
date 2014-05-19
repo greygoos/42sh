@@ -5,7 +5,7 @@
 ** Login   <aubry_f@epitech.net>
 **
 ** Started on  Wed Apr 30 14:15:38 2014 aubry_f
-** Last update Fri May 16 16:16:26 2014 aubry_f
+** Last update Sat May 17 13:44:25 2014 bouchard alexandre
 */
 
 #include <stdio.h>
@@ -91,6 +91,7 @@ int	setenv_main(char *name, char *value, int overwrite, char **env) // main du s
     }
   envir = NULL;
   envir = new_envir(envir, name, value);
+  printf("envir=%s", envir);
   while (env[c] != NULL)
     put_tail_list(&list, env[c++]);
   if ((c = match_test(&list, name)) != 0 && overwrite != 0)
