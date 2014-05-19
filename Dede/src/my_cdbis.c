@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue May 13 11:02:05 2014 daniel_d
-** Last update Tue May 13 11:52:52 2014 daniel_d
+** Last update Thu May 15 15:23:21 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -24,7 +24,7 @@ char    *cpydirec(int l, char *str, char *buffer)
   int   i;
 
   i = 0;
-  if ((str = malloc(sizeof(str) * my_strlen(buffer - l))) == NULL)
+  if ((str = malloc(sizeof(*str) * my_strlen(buffer - l))) == NULL)
     return (NULL);
   while (buffer[l] != '\n' && buffer[l] != '\0')
     {

@@ -5,9 +5,10 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Oct  7 13:41:32 2013 daniel_d
-** Last update Sat Apr 26 15:50:55 2014 daniel_d
+** Last update Fri May 16 10:17:54 2014 daniel_d
 */
 
+#include <stdlib.h>
 #include "my.h"
 
 void	my_revstr(char *str)
@@ -15,9 +16,12 @@ void	my_revstr(char *str)
   int	i;
 
   i = 0;
-  while (str[i++] != '\0');
-  i--;
-  while (i != 0)
-    my_putchar(str[i--]);
-  my_putchar('\n');
+  if (str != NULL)
+    {
+      while (str[i++] != '\0');
+      i--;
+      while (i != 0)
+	my_putchar(str[i--]);
+      my_putchar('\n');
+    }
 }

@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Jan 29 09:55:26 2014 daniel_d
-** Last update Tue May 13 13:53:22 2014 daniel_d
+** Last update Sat May 17 11:26:56 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -23,7 +23,7 @@ int	take_direction(char *home)
   while (home[i] != '=')
     i++;
   i++;
-  if ((str = malloc(sizeof(str) * (end - i))) == NULL)
+  if ((str = malloc(sizeof(*str) * (end - i))) == NULL)
     return (-1);
   while (i < end)
     {
@@ -65,6 +65,7 @@ int	my_gohome(char **env)
 
   i = 0;
   pos = my_needposchar("HOME=", '=');
+  my_printf("%d\n");
   while (env[i] != NULL)
     {
       if (my_nmatch("HOME=", env[i], pos))
@@ -85,7 +86,7 @@ int	my_cd_exec(char *buffer)
   char	*str;
 
   l = 3;
-  if ((str = malloc(sizeof(str))) == NULL)
+  if ((str = malloc(sizeof(*str))) == NULL)
     return (-1);
   if (my_strcmp("..", buffer) == 0)
     {

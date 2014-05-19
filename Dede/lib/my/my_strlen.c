@@ -5,14 +5,18 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Oct  9 09:56:02 2013 daniel_d
-** Last update Sat Mar  8 14:35:08 2014 daniel_d
+** Last update Fri May 16 10:17:10 2014 daniel_d
 */
+
+#include <stdlib.h>
 
 int	my_strlen(char *str)
 {
   int a;
 
   a = 0;
+  if (str == NULL)
+    return (0);
   while (str[a++] != '\0');
   a--;
   return (a);

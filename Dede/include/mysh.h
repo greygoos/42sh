@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Mon May 12 15:53:26 2014 le-franc
-** Last update Tue May 13 16:50:54 2014 daniel_d
+** Last update Sat May 17 10:35:27 2014 daniel_d
 */
 
 #ifndef MYSH_H_
@@ -79,6 +79,15 @@ int     my_exec(char *cmd, char **env);
 */
 
 char    **my_setenv(char *cmd, char **env);
-char    **my_unsetenv(char *cmd, char **env);
+
+/* unsetenv */
+typedef struct s_list
+{
+  char	*envir;
+  struct s_list	*next;
+} t_list;
+
+void    show_list(t_list **list);
+int     put_tail_list(t_list **list, char *envir);
 
 #endif

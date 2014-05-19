@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue Apr 22 15:36:12 2014 daniel_d
-** Last update Tue May 13 13:38:52 2014 daniel_d
+** Last update Fri May 16 13:59:38 2014 daniel_d
 */
 
 #include <stdio.h>
@@ -20,7 +20,7 @@ int	my_nmatch_bis(char *s1, char *s2, int pos)
     {
       if (s1[i] != s2[i])
 	return (-1);
-      i++;
+      ++i;
     }
   return (0);
 }

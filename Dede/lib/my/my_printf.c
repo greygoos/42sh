@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Thu Nov 14 14:57:17 2013 daniel_d
-** Last update Wed Feb 19 14:18:11 2014 daniel_d
+** Last update Thu May 15 15:12:44 2014 daniel_d
 */
 
 #include <stdarg.h>
@@ -80,7 +80,7 @@ int	my_printf(const char *format, ...)
   va_list ap;
   char *my_formatall;
 
-    my_formatall = malloc(sizeof(my_formatall) * 11);
+    my_formatall = malloc(sizeof(*my_formatall) * 11);
   if (my_formatall == NULL)
     return (0);
   if (format == NULL)

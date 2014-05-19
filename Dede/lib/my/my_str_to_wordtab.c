@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Tue Jan 28 16:32:11 2014 le-fra_g
-** Last update Wed May 14 10:47:23 2014 daniel_d
+** Last update Fri May 16 10:16:40 2014 daniel_d
 */
 
 #include <stdio.h>
@@ -26,7 +26,7 @@ char	**my_tab(char **tab, char *str)
       j = 0;
       while (str[k + j] != 0 && str[k + j] != '\t' && str[k + j] != ' ')
 	j++;
-      tab[i] = malloc(sizeof(char*) * (j));
+      tab[i] = malloc(sizeof(*tab) * (j));
       j=0;
       while (str[k] != 0 && str[k] != '\t' && str[k] != ' ')
 	{

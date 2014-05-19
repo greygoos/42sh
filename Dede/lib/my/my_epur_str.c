@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Mar  5 10:24:15 2014 daniel_d
-** Last update Wed Mar  5 10:56:09 2014 daniel_d
+** Last update Fri May 16 10:10:55 2014 daniel_d
 */
 
 #include <stdio.h>
@@ -22,7 +22,7 @@ char	*my_epur_str(char	*str)
   i = 0;
   if (str == NULL)
     return (NULL);
-  if ((dest = malloc(sizeof(dest) * (my_strlen(str) + 1))) == NULL)
+  if ((dest = malloc(sizeof(*dest) * (my_strlen(str) + 1))) == NULL)
     return (NULL);
   while (str[i] != '\0')
     {

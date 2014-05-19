@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue Nov 19 11:43:10 2013 daniel_d
-** Last update Fri Mar 28 11:50:09 2014 daniel_d
+** Last update Fri May 16 10:07:52 2014 daniel_d
 */
 
 #include <sys/types.h>
@@ -26,7 +26,7 @@ char	*my_realloc(char *str, int size)
   if (str == NULL)
     return (NULL);
   len = my_strlen(str);
-  if ((tmp = malloc(sizeof(tmp) * len)) == NULL)
+  if ((tmp = malloc(sizeof(*tmp) * len)) == NULL)
     return (NULL);
   while (str[i] != '\0')
     {
@@ -34,7 +34,7 @@ char	*my_realloc(char *str, int size)
       i++;
     }
   free(str);
-  if ((str = malloc(sizeof(str) * (len + size))) == NULL)
+  if ((str = malloc(sizeof(*str) * (len + size))) == NULL)
     return (NULL);
   while (tmp[i] != '\0')
     {
@@ -52,9 +52,9 @@ char	*get_next_line(const int fd)
   int	i;
 
   i = 0;
-  if ((buffer = malloc(sizeof(buffer) * 1)) == NULL)
+  if ((buffer = malloc(sizeof(*buffer) * 1)) == NULL)
     return (NULL);
-  if ((str = malloc(sizeof(str) * 1)) == NULL)
+  if ((str = malloc(sizeof(*str) * 1)) == NULL)
     return (NULL);
   while (buffer[0] != '\n' && read(fd, buffer, 1) != -1)
     {
