@@ -1,0 +1,53 @@
+/*
+** my.h for my.h in /home/le-fra_g/minishel/include
+** 
+** Made by le-franc
+** Login   <le-fra_g@epitech.net>
+** 
+** Started on  Fri May 16 16:43:39 2014 le-franc
+** Last update Mon May 19 14:22:19 2014 le-franc
+*/
+
+#ifndef MY_H_
+# define MY_H_
+
+#include <stdlib.h>
+#include <unistd.h>
+
+/* my_putchar.c */
+void	my_putchar(char);
+
+/* my_putstr.c */
+int	my_putstr(char *);
+
+/* my_strlen.c */
+int	my_strlen(char *);
+
+/* my_strcat.c */
+char	*my_strcat(char *, char *);
+
+/* my_strcmp.c */
+int	my_strcmp(char *, char *);
+
+/* my_strncmp.c */
+int	my_strncmp(char *, char *, int);
+
+/* my_strdup.c */
+char	*my_strdup(char *);
+
+/* my_str_to_wordtab.c */
+int	count_line_str(char *);
+int	count_long_line_str(char *, int);
+int	count_long_line_str(char *, int);
+char	**my_str_to_wordtab(char *);
+
+/* my_get_nbr.c */
+int	nbrlen(char *);
+int	my_pow(int);
+int	my_getnbr(char *);
+
+/* my_putnbr.c */
+int	my_abs(int);
+int	my_putnbr(int);
+
+#endif

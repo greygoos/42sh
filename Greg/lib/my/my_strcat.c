@@ -1,30 +1,30 @@
 /*
-** my_strcat.c for char *my_strcat(char *dest, char *src) in /home/boucha_q/rendu/Piscine-C-Jour_07/ex_01
-** 
-** Made by boucha_q
-** Login   <boucha_q@epitech.net>
-** 
-** Started on  Tue Oct  8 09:33:20 2013 boucha_q
-** Last update Tue May 13 16:42:43 2014 bouchard alexandre
+** my_strcat.c for my_strcat in /home/mulot_i/rendu/CPE_2014_corewar
+**
+** Made by mulot_i
+** Login   <mulot_i@epitech.net>
+**
+** Started on  Thu Apr  3 17:29:39 2014 mulot_i
+** Last update Thu Apr  3 17:35:51 2014 mulot_i
 */
 
-#include <stdlib.h>
-#include "my.h"
+#include "corewar.h"
 
-char	*my_strcat(char *src, char *src1)
+char	*my_strcat(char *from, char *with)
 {
-  char	*dest;
   int	i;
-  int	j;
+  int	n;
+  char	*str;
 
-  j = -1;
-  i = -1;
-  dest = malloc(sizeof(*dest) * (my_strlen(src) + my_strlen(src) + 1));
-  while (src[++j] != '\0')
-    dest[++i] = src[j];
-  j = -1;
-  while (src1[++j] != '\0')
-    dest[++i] = src1[j];
-  dest[++i] = '\0';
-  return (dest);
+  if ((str = malloc(sizeof(str) * my_strlen(from) + my_strlen(with) + 1)) == NULL)
+    return (NULL);
+  i = 0;
+  n = 0;
+  while (from[i] != 0)
+    str[n++] = from[i++];
+  i = 0;
+  while (with[i] != 0)
+    str[n++] = with[i++];
+  str[n + 1] = '\0';
+  return (str);
 }
