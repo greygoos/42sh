@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue May 13 15:47:53 2014 daniel_d
-** Last update Sat May 17 11:27:36 2014 daniel_d
+** Last update Mon May 19 14:20:38 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -47,19 +47,24 @@ char	*my_access(char **path, char *cmd)
 
 int	exec_cmd(char **tabcmd, char **env)
 {
+  int	result;
   int	pid;
 
+  result = 0;
   pid = fork();
   if (pid == -1)
     return (-1);
   if (pid == 0)
     {
       if (execve(tabcmd[0], tabcmd, env) == -1)
-	my_printf("%s Command not found.\n", PROMPT);
+	{
+	  my_printf("%s Command not found.\n", PROMPT);
+	  result = -1;
+	}
       exit(pid);
     }
   wait(&pid);
-  return (0);
+  return (result);
 }
 
 int	my_exec_cmd(char *cmd, char **path, char **env)
@@ -70,7 +75,8 @@ int	my_exec_cmd(char *cmd, char **path, char **env)
   tabcmd[0] = my_access(path, tabcmd[0]);
   if (tabcmd[0] == NULL)
     return (-1);
-  exec_cmd(tabcmd, env);
+  if (exec_cmd(tabcmd, env) == -1)
+    return (-1);
   return (0);
 }
 
@@ -81,6 +87,7 @@ int	my_exec(char *cmd, char **env)
   if ((path = malloc(sizeof(**path))) == NULL)
     return (-1);
   path = my_path(path, env);
-  my_exec_cmd(cmd, path, env);
+  if (my_exec_cmd(cmd, path, env) == -1)
+    return (-1);
   return (0);
 }

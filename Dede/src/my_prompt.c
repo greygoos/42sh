@@ -5,15 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Last update Fri May 16 14:30:29 2014 le-franc
-=======
-** Last update Tue May 13 16:37:22 2014 daniel_d
->>>>>>> b21663bfbd2832b340ba1f9b47953530bfa2d55f
-=======
-** Last update Sat May 17 11:26:06 2014 daniel_d
->>>>>>> 6695157c3a92f3c63bf40c8185d1da71ae9b6959
+** Last update Mon May 19 16:38:50 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -67,15 +59,11 @@ int     my_prompt(char **env)
   my_putstr(PROMPT);
   while ((cmd = my_read()) != NULL)
     {
-<<<<<<< HEAD
-      if ((env = my_check_cmd(cmd, env)) == NULL)
-=======
       if (cmd[0] == '\n')
         my_putstr("\0");
       else if (my_nmatch("exit", cmd, 4) == 0)
 	return (my_exit(cmd));
       else if ((env = my_check_cmd(cmd, env)) == NULL)
->>>>>>> 6695157c3a92f3c63bf40c8185d1da71ae9b6959
 	return (-1);
       if (cmd[0] == '\0')
 	my_putstr("\n");
