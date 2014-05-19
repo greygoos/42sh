@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Thu May 15 16:19:42 2014 bouchard alexandre
-** Last update Fri May 16 17:40:05 2014 bouchard alexandre
+** Last update Mon May 19 16:16:29 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 char    *ret_before_egale(char *str)
 {

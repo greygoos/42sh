@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 28 14:36:45 2014 bouchard alexandre
-** Last update Mon May 19 14:22:15 2014 bouchard alexandre
+** Last update Mon May 19 16:15:55 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 char	*my_alias_in_buff(int i, char **tab, char *buff)
 {

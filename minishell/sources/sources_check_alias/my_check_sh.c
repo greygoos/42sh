@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 28 10:16:02 2014 bouchard alexandre
-** Last update Fri May 16 17:15:59 2014 bouchard alexandre
+** Last update Mon May 19 16:15:12 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 void	my_check_sh(int fd_sh, int fd_tmp)
 {

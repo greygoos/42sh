@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Fri May 16 17:13:14 2014 bouchard alexandre
-** Last update Fri May 16 17:48:26 2014 bouchard alexandre
+** Last update Mon May 19 16:14:16 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 void     my_tmp_alias()
 {
