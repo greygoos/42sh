@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Mon May 19 16:38:50 2014 daniel_d
+** Last update Tue May 20 10:33:29 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -43,9 +43,9 @@ char	**my_check_cmd(char *cmd, char **env)
   else if (my_nmatch("echo", cmd, 4) == 0)
     my_echo(cmd);
   else if (my_nmatch("setenv", cmd, 6) == 0)
-    printf("setenv\n"); /*env = my_setenv(cmd, env);*/
+    my_printf("setenv\n");
   else if (my_nmatch("unsetenv", cmd, 8) == 0)
-    printf("unsetenv\n"); /*env = my_unsetenv(cmd, env);*/
+    my_printf("unsetenv\n");
   else
     my_exec(cmd, env);
   return (env);

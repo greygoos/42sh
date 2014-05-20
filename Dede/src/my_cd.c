@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Jan 29 09:55:26 2014 daniel_d
-** Last update Mon May 19 14:46:44 2014 daniel_d
+** Last update Tue May 20 10:39:37 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -20,9 +20,7 @@ int	take_direction(char *home)
   i = 0;
   k = 0;
   end = my_strlen(home);
-  while (home[i] != '=')
-    i++;
-  i++;
+  i = my_needposchar("HOME=", '=') + 1;
   if ((str = malloc(sizeof(*str) * (end - i))) == NULL)
     return (-1);
   while (i < end)
@@ -65,10 +63,10 @@ int	my_gohome(char **env)
 
   i = 0;
   pos = my_needposchar("HOME=", '=');
-  my_printf("%d\n");
   while (env[i] != NULL)
     {
-      if (my_nmatch("HOME=", env[i], pos))
+      
+      if (my_nmatch("HOME=", env[i], pos + 1) == 0)
 	{
 	  if (take_direction(env[i]) == -1)
 	    return (-1);
