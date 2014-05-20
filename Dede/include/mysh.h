@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Mon May 12 15:53:26 2014 le-franc
-** Last update Sat May 17 10:35:27 2014 daniel_d
+** Last update Tue May 20 10:45:24 2014 daniel_d
 */
 
 #ifndef MYSH_H_
@@ -41,7 +41,7 @@ int     my_cd(char *buffer, char **env);
 int     my_cd_exec(char *buffer);
 int     my_gohome(char **env);
 int     my_cd_tiret(char **env);
-int     take_direction(char *home);
+int     take_direction(char *home, char *where);
 char    *cpydirec(int l, char *str, char *buffer);
 int     aff_directory(char *env, int pos);
 
