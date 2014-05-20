@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 28 10:57:01 2014 bouchard alexandre
-** Last update Fri May 16 17:15:28 2014 bouchard alexandre
+** Last update Mon May 19 16:14:44 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 void	my_check_equal(char *str, int countline_sh, int fd_tmp)
 {

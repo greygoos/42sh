@@ -5,12 +5,12 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Jan 29 09:55:26 2014 daniel_d
-** Last update Sat May 17 11:26:56 2014 daniel_d
+** Last update Tue May 20 10:57:03 2014 daniel_d
 */
 
 #include "mysh.h"
 
-int	take_direction(char *home)
+int	take_direction(char *home, char *where)
 {
   char	*str;
   int	k;
@@ -20,9 +20,7 @@ int	take_direction(char *home)
   i = 0;
   k = 0;
   end = my_strlen(home);
-  while (home[i] != '=')
-    i++;
-  i++;
+  i = my_needposchar(where, '=') + 1;
   if ((str = malloc(sizeof(*str) * (end - i))) == NULL)
     return (-1);
   while (i < end)
@@ -41,12 +39,12 @@ int     my_cd_tiret(char **env)
   int   i;
 
   i = 0;
-  pos = my_needposchar("OLDPWD=", '=');
+  pos = my_needposchar("OLDPWD=", '=') + 1;
   while (env[i] != NULL)
     {
       if (my_nmatch("OLDPWD=", env[i], pos) == 0)
 	{
-	  if (take_direction(env[i]) == 1)
+	  if (take_direction(env[i], "OLDPWD=") == 1)
 	    return (-1);
 	  if (aff_directory(env[i], pos) == -1)
 	    return (-1);
@@ -65,12 +63,11 @@ int	my_gohome(char **env)
 
   i = 0;
   pos = my_needposchar("HOME=", '=');
-  my_printf("%d\n");
   while (env[i] != NULL)
     {
-      if (my_nmatch("HOME=", env[i], pos))
+      if (my_nmatch("HOME=", env[i], pos + 1) == 0)
 	{
-	  if (take_direction(env[i]) == -1)
+	  if (take_direction(env[i], "HOME=") == -1)
 	    return (-1);
 	  return (0);
 	}

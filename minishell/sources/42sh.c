@@ -5,10 +5,15 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Fri May 16 15:39:11 2014 bouchard alexandre
+<<<<<<< HEAD
 ** Last update Tue May 20 14:13:53 2014 bouchard alexandre
+=======
+** Last update Mon May 19 16:12:24 2014 le-franc
+>>>>>>> e44ba8d01bc9228e584b223ca750246bc6958e14
 */
 
-#include "../include/proto.h"
+#include "../include/my.h"
+#include "../include/sh.h"
 
 int	my_42sh(char **env)
 {

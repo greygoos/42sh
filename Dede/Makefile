@@ -5,11 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-<<<<<<< HEAD
-## Last update Fri May 16 16:38:13 2014 le-franc
-=======
-## Last update Sat May 17 10:54:22 2014 daniel_d
->>>>>>> 6695157c3a92f3c63bf40c8185d1da71ae9b6959
+## Last update Mon May 19 16:37:33 2014 daniel_d
 ##
 
 CC 	= gcc

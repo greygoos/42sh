@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Wed Apr 30 10:03:01 2014 bouchard alexandre
-** Last update Fri May 16 22:24:13 2014 bouchard alexandre
+** Last update Mon May 19 16:16:45 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 char	**my_realloc_tab(char **tab, char *str)
 {

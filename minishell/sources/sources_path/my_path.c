@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 08:51:32 2014 bouchard alexandre
-** Last update Sat May 17 11:33:47 2014 bouchard alexandre
+** Last update Mon May 19 16:17:25 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 char	**my_path(char **env, char *buff)
 {

@@ -5,19 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-<<<<<<< HEAD
-** Last update Mon May 19 10:27:04 2014 bouchard alexandre
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-** Last update Fri May 16 14:30:29 2014 le-franc
-=======
-** Last update Tue May 13 16:37:22 2014 daniel_d
->>>>>>> b21663bfbd2832b340ba1f9b47953530bfa2d55f
-=======
-** Last update Sat May 17 11:26:06 2014 daniel_d
->>>>>>> 6695157c3a92f3c63bf40c8185d1da71ae9b6959
->>>>>>> 3460301607a3286b7628b1ad7d6e0c2e8f7b15e1
+** Last update Tue May 20 10:56:40 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -55,9 +43,9 @@ char	**my_check_cmd(char *cmd, char **env)
   else if (my_nmatch("echo", cmd, 4) == 0)
     my_echo(cmd);
   else if (my_nmatch("setenv", cmd, 6) == 0)
-    printf("setenv\n"); /*env = my_setenv(cmd, env);*/
+    my_printf("setenv\n");
   else if (my_nmatch("unsetenv", cmd, 8) == 0)
-    printf("unsetenv\n"); /*env = my_unsetenv(cmd, env);*/
+    my_printf("unsetenv\n");
   else
     my_exec(cmd, env);
   return (env);
@@ -71,15 +59,11 @@ int     my_prompt(char **env)
   my_putstr(PROMPT);
   while ((cmd = my_read()) != NULL)
     {
-<<<<<<< HEAD
-      if ((env = my_check_cmd(cmd, env)) == NULL)
-=======
       if (cmd[0] == '\n')
         my_putstr("\0");
       else if (my_nmatch("exit", cmd, 4) == 0)
 	return (my_exit(cmd));
       else if ((env = my_check_cmd(cmd, env)) == NULL)
->>>>>>> 6695157c3a92f3c63bf40c8185d1da71ae9b6959
 	return (-1);
       if (cmd[0] == '\0')
 	my_putstr("\n");

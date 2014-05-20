@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 09:36:17 2014 bouchard alexandre
-** Last update Sat May 17 11:34:05 2014 bouchard alexandre
+** Last update Mon May 19 16:17:37 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 int     count_line_path(char *path)
 {

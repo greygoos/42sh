@@ -5,7 +5,7 @@
 ** Login   <aubry_f@epitech.net>
 **
 ** Started on  Wed Apr 30 14:15:38 2014 aubry_f
-** Last update Sat May 17 11:29:36 2014 daniel_d
+** Last update Mon May 19 10:43:10 2014 daniel_d
 */
 
 #include <stdio.h>
@@ -76,7 +76,7 @@ int	name_check(char *name) // on vérifie si il y a un = dans le name
   return (0);
 }
 
-int	setenv_main(char *name, char *value, int overwrite, char **env) // main du setenv
+char	**setenv_main(char *name, char *value, int overwrite, char **env) // main du setenv
 {
   t_list *list;
   int	c;
@@ -100,6 +100,7 @@ int	setenv_main(char *name, char *value, int overwrite, char **env) // main du s
   show_list(&list);
   return (0);
 }
+
 /*
 int	main(int argc, char **argv, char **env)
 {
