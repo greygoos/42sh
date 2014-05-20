@@ -5,7 +5,7 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Fri May 16 15:39:11 2014 bouchard alexandre
-** Last update Mon May 19 14:49:24 2014 bouchard alexandre
+** Last update Tue May 20 14:13:53 2014 bouchard alexandre
 */
 
 #include "../include/proto.h"
@@ -14,6 +14,7 @@ int	my_42sh(char **env)
 {
   char  *buff;
   char	**path;
+  char	**tab_buff;
   int	i;
 
   (void)env;
@@ -21,7 +22,6 @@ int	my_42sh(char **env)
   while ((buff = my_read()) != NULL)
     {
       buff = my_alias(buff);
-      printf("%s\n", buff);
       path = my_path(env, buff);
       printf("%s\n", buff);         //affiche buff apres alias
       i = -1;
@@ -30,7 +30,8 @@ int	my_42sh(char **env)
 	  my_putstr(path[i]);
 	  my_putchar('\n');
 	}
-      /*STR_TO_WORD_TAB DU BUFF*/
+      tab_buff = my_str_to_wordtab(buff); /*STR_TO_WORD_TAB DU BUFF*/
+
       /*CHECK DES BUILTINS GRACE A STRCMP DE TAB[0]*/
       /*CHECK DES ACCES DU BUFF*/
       i = -1;

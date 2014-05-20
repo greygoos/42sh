@@ -1,14 +1,14 @@
 /*
-** my_putchar.c for my_putchar in /home/le-fra_g/minishel
+** my_putchar.c for my_putchar in /home/boucha_q/rendu/Piscine-C-lib/my
 ** 
-** Made by le-franc
-** Login   <le-fra_g@epitech.net>
+** Made by boucha_q
+** Login   <boucha_q@epitech.net>
 ** 
-** Started on  Fri May 16 16:42:40 2014 le-franc
-** Last update Fri May 16 17:07:50 2014 le-franc
+** Started on  Mon Oct 21 09:15:14 2013 boucha_q
+** Last update Mon Apr 14 13:55:10 2014 bouchard alexandre
 */
 
-#include "../include/my.h"
+#include <unistd.h>
 
 void	my_putchar(char c)
 {

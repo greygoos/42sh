@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Fri May 16 16:43:39 2014 le-franc
-** Last update Mon May 19 14:22:19 2014 le-franc
+** Last update Tue May 20 14:11:58 2014 bouchard alexandre
 */
 
 #ifndef MY_H_
@@ -18,7 +18,7 @@
 void	my_putchar(char);
 
 /* my_putstr.c */
-int	my_putstr(char *);
+void	my_putstr(char *);
 
 /* my_strlen.c */
 int	my_strlen(char *);

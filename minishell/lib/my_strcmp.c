@@ -1,28 +1,27 @@
 /*
-** my_strcmp.c for my_strcmp.c in /home/le-fra_g/minishel/lib
+** my_strcmp.c for int my_strcmp(char *s1,char *s2) in /home/boucha_q/rendu/Piscine-C-Jour_06/ex_5
 ** 
-** Made by le-franc
-** Login   <le-fra_g@epitech.net>
+** Made by boucha_q
+** Login   <boucha_q@epitech.net>
 ** 
-** Started on  Fri May 16 17:22:26 2014 le-franc
-** Last update Mon May 19 14:23:41 2014 le-franc
+** Started on  Sat Oct 19 16:31:45 2013 boucha_q
+** Last update Thu Apr 24 14:36:02 2014 bouchard alexandre
 */
 
-#include "../include/my.h"
-
-int	my_strcmp(char *to_cmp, char *with)
+int	my_strcmp(char *str1, char *str2)
 {
-  int	i;
+  int	a;
   int	n;
-
-  i = 0;
-  while (with[i] != 0)
+  n = 0;
+  a = 0;
+  while ( str1[a] != '\0' || str2[a] != '\0')
     {
-      if (to_cmp[i] == with[i])
-        n = 1;
-      else
-        n = 0;
-      i++;
+      if ( str1[a] != str2[a])
+	{
+	  n = str1[a] - str2[a];
+	  return (n);
+	}
+      a = a + 1;
     }
-  return (n);
+  return (0);
 }

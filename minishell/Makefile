@@ -5,7 +5,7 @@
 ## Login   <boucha_q@epitech.net>
 ## 
 ## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
-## Last update Mon May 19 14:52:32 2014 bouchard alexandre
+## Last update Tue May 20 14:08:36 2014 bouchard alexandre
 ##
 
 SRC=	sources/main.c \
@@ -30,14 +30,15 @@ SRC=	sources/main.c \
 	lib/my_strcat.c \
 	lib/my_putchar.c \
 	lib/my_putstr.c \
-	lib/my_putnbr.c \
+	lib/my_put_nbr.c \
 	lib/my_strlen.c \
+	lib/my_str_to_wordtab.c \
 	my_get_nextline.c
 OBJ=	$(SRC:.c=.o)
 
 CC=	gcc -g
 
-CFLAGS=	-I .
+CFLAGS=	-I./include/
 CFLAGS += -Wall -Wextra
 RM=	rm -f
 

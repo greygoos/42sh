@@ -5,11 +5,10 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 09:36:17 2014 bouchard alexandre
-** Last update Tue May 20 14:10:23 2014 bouchard alexandre
+** Last update Mon May 19 14:09:40 2014 le-franc
 */
 
-#include "my.h"
-#include "proto.h"
+#include "../include/my.h"
 
 int     count_line_str(char *str)
 {
