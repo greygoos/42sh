@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 28 11:10:42 2014 bouchard alexandre
-** Last update Fri May 16 17:15:44 2014 bouchard alexandre
+** Last update Mon May 19 16:14:03 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 void	my_check_name_alias(char *str, int countline_sh, int fd_tmp)
 {

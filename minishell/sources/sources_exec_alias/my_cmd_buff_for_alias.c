@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 28 15:03:32 2014 bouchard alexandre
-** Last update Fri May 16 17:39:48 2014 bouchard alexandre
+** Last update Mon May 19 16:16:16 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 char	*my_cmd_buff_for_alias(char *buff, char *line)
 {

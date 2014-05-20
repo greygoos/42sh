@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 09:11:31 2014 bouchard alexandre
-** Last update Mon May 19 14:24:44 2014 bouchard alexandre
+** Last update Mon May 19 16:17:15 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 int     my_match(char *str, char *str1)
 {

@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Fri May 16 16:43:39 2014 le-franc
-** Last update Mon May 19 14:22:19 2014 le-franc
+** Last update Mon May 19 15:07:18 2014 le-franc
 */
 
 #ifndef MY_H_
@@ -13,6 +13,8 @@
 
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
 /* my_putchar.c */
 void	my_putchar(char);
@@ -49,5 +51,8 @@ int	my_getnbr(char *);
 /* my_putnbr.c */
 int	my_abs(int);
 int	my_putnbr(int);
+
+/* my_get_next_line.c */
+char	*my_get_nextline(int);
 
 #endif

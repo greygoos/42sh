@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 14 10:33:42 2014 bouchard alexandre
-** Last update Mon May 19 14:23:49 2014 bouchard alexandre
+** Last update Mon May 19 16:17:05 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
+#include "../../include/my.h"
 
 int     my_strlen_space(char *str)
 {

@@ -5,10 +5,11 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Fri May 16 15:42:15 2014 bouchard alexandre
-** Last update Fri May 16 15:55:33 2014 bouchard alexandre
+** Last update Mon May 19 16:12:44 2014 le-franc
 */
 
-#include "../include/proto.h"
+#include "../include/my.h"
+#include "../include/sh.h"
 
 char    *my_read()
 {

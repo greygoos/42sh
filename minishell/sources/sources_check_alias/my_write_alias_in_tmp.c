@@ -5,10 +5,10 @@
 ** Login   <boucha_q@epitech.net>
 ** 
 ** Started on  Mon Apr 28 13:07:13 2014 bouchard alexandre
-** Last update Fri May 16 17:16:32 2014 bouchard alexandre
+** Last update Mon May 19 16:06:11 2014 le-franc
 */
 
-#include "../../include/proto.h"
+#include "../../include/sh.h"
 
 void	my_write_alias_in_tmp(char *str, int fd_tmp)
 {
