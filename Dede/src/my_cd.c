@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Wed Jan 29 09:55:26 2014 daniel_d
-** Last update Tue May 20 10:52:58 2014 daniel_d
+** Last update Tue May 20 10:57:03 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -65,7 +65,6 @@ int	my_gohome(char **env)
   pos = my_needposchar("HOME=", '=');
   while (env[i] != NULL)
     {
-      
       if (my_nmatch("HOME=", env[i], pos + 1) == 0)
 	{
 	  if (take_direction(env[i], "HOME=") == -1)
