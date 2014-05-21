@@ -1,18 +1,23 @@
 /*
-** my_putstr.c for my_putstr.c in /home/le-fra_g/minishel
+** my_putstr.c for int my_putstr(char *str) in /home/boucha_q/rendu/Piscine-C-Jour_04
 ** 
-** Made by le-franc
-** Login   <le-fra_g@epitech.net>
+** Made by boucha_q
+** Login   <boucha_q@epitech.net>
 ** 
-** Started on  Fri May 16 16:55:59 2014 le-franc
-** Last update Fri May 16 16:57:21 2014 le-franc
+** Started on  Thu Oct  3 12:57:25 2013 boucha_q
+** Last update Mon Apr 14 13:54:05 2014 bouchard alexandre
 */
 
-#include "../include/my.h"
+#include "my.h"
 
-int	my_putstr(char *str)
+void	my_putstr(char *str)
 {
-  if (str)
-    write(1, str, my_strlen(str));
-  return (1);
+  int n;
+
+  n = 0;
+  while (str[n] != '\0')
+    {
+      my_putchar(str[n]);
+      n = n + 1;
+    }
 }

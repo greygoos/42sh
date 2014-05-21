@@ -4,8 +4,13 @@
 ## Made by le-franc
 ## Login   <le-fra_g@epitech.net>
 ## 
+<<<<<<< HEAD
+## Started on  Thu Jan 30 04:53:51 2014 bouchard alexandre
+## Last update Tue May 20 14:08:36 2014 bouchard alexandre
+=======
 ## Started on  Fri May 16 16:31:08 2014 le-franc
 ## Last update Mon May 19 16:28:18 2014 le-franc
+>>>>>>> e44ba8d01bc9228e584b223ca750246bc6958e14
 ##
 
 CC	= gcc
@@ -38,6 +43,19 @@ SRC	= sources/42sh.c \
 
 LIB	= lib/my_putchar.c \
 	lib/my_putstr.c \
+<<<<<<< HEAD
+	lib/my_put_nbr.c \
+	lib/my_strlen.c \
+	lib/my_str_to_wordtab.c \
+	my_get_nextline.c
+OBJ=	$(SRC:.c=.o)
+
+CC=	gcc -g
+
+CFLAGS=	-I./include/
+CFLAGS += -Wall -Wextra
+RM=	rm -f
+=======
 	lib/my_strlen.c \
 	lib/my_strcat.c \
 	lib/my_strcmp.c \
@@ -48,6 +66,7 @@ LIB	= lib/my_putchar.c \
 	lib/my_get_nextline.c \
 	lib/my_getnbr.c \
 	lib/my_putnbr.c \
+>>>>>>> e44ba8d01bc9228e584b223ca750246bc6958e14
 
 OBJ	= $(SRC:.c=.o)
 

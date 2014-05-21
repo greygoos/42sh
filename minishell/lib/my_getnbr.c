@@ -1,61 +1,41 @@
 /*
-** my_getnbr.c for my_getnbr in /home/le-fra_g/rendu/Piscine-C-lib/lib
+** my_getnbr.c for int my_getnbr(char *str) in /home/boucha_q/rendu/Piscine-C-Jour_04
 ** 
-** Made by le-fra_g
-** Login   <le-fra_g@epitech.net>
+** Made by boucha_q
+** Login   <boucha_q@epitech.net>
 ** 
-** Started on  Mon Oct 21 09:26:26 2013 le-fra_g
-** Last update Mon May 19 14:23:23 2014 le-franc
+** Started on  Sat Oct 19 12:28:04 2013 boucha_q
+** Last update Thu Nov 14 10:52:42 2013 boucha_q
 */
-
-#include "../include/my.h"
-
-int	nbrlen(char *str)
-{
-  int	 a;
-
-  a = 0;
-  while (str[a]  != '\0')
-    a++;
-  return (a);
-}
-
-int	my_pow(int a)
-{
-  int	m;
-  int	p;
-
-  m = 1;
-  p = 1;
-  while (m < a)
-    {
-      p = p * 10;
-      m = m + 1;
-    }
-  return (p);
-}
 
 int	my_getnbr(char *str)
 {
-  int	b;
-  int	pow;
-  int	a;
-  int	res;
+  int	m;
+  int	n;
+  int	result;
 
-  b = nbrlen(str);
-  pow = my_pow(b);
-  a = 0;
-  if (str[a] == '-')
+  result = 0;
+  m = 0;
+  n = 0;
+  while ( str[m] == '-' || str[m] == '+')
     {
-      b = -1;
-      a = a + 1;
+      if ( str[m] == '-')
+	{
+	  n = n + 1;
+	  m = m + 1;
+	}
+      else
+	m = m + 1;
     }
-  while (str[a] != '\0')
+  while ( str[m] != '\0')
     {
-      res = res + (str[a] - 48) * pow;
-      a = a + 1;
-      pow = pow / 10;
+      result = result * 10;
+      result = result + (str[m] - 48);
+      m = m + 1;
     }
-  my_putnbr(res);
-  return (res);
+  if ( n % 2 > 0 )
+    {
+      result = - result;
+    }
+  return (result);
 }
