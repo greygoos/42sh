@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Tue May 13 15:47:53 2014 daniel_d
-** Last update Mon May 19 14:20:38 2014 daniel_d
+** Last update Wed May 21 08:47:38 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -15,7 +15,7 @@ char	**my_path(char **path, char **env)
   int	i;
 
   i = 0;
-  while (my_nmatch("PATH", env[i], 4) != 0)
+  while (my_nmatch("PATH=", env[i], 5) != 0)
     i = i + 1;
   path = my_path_to_wordtab(env[i]);
   return (path);
@@ -40,7 +40,7 @@ char	*my_access(char **path, char *cmd)
 	  else
 	    i++;
 	}
-      my_printf("%s Command not found.\n", PROMPT);
+      my_printf("Command not found .\n");
     }
   return (NULL);
 }
@@ -58,7 +58,7 @@ int	exec_cmd(char **tabcmd, char **env)
     {
       if (execve(tabcmd[0], tabcmd, env) == -1)
 	{
-	  my_printf("%s Command not found.\n", PROMPT);
+	  my_printf("Command not found.\n");
 	  result = -1;
 	}
       exit(pid);

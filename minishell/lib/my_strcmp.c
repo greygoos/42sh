@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Fri May 16 17:22:26 2014 le-franc
-** Last update Mon May 19 14:23:41 2014 le-franc
+** Last update Tue May 20 14:24:06 2014 daniel_d
 */
 
 #include "../include/my.h"
@@ -21,7 +21,7 @@ int	my_strcmp(char *to_cmp, char *with)
       if (to_cmp[i] == with[i])
         n = 1;
       else
-        n = 0;
+	return (0);
       i++;
     }
   return (n);

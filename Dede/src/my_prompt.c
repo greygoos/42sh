@@ -5,7 +5,7 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon May 12 16:52:36 2014 daniel_d
-** Last update Tue May 20 10:56:40 2014 daniel_d
+** Last update Tue May 20 16:05:10 2014 daniel_d
 */
 
 #include "mysh.h"
@@ -56,7 +56,7 @@ int     my_prompt(char **env)
   char  *cmd;
 
   signal_set();
-  my_putstr(PROMPT);
+  my_putstr("$>");
   while ((cmd = my_read()) != NULL)
     {
       if (cmd[0] == '\n')

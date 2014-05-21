@@ -5,14 +5,14 @@
 ** Login   <daniel_d@epitech.net>
 ** 
 ** Started on  Mon Jan  6 09:25:19 2014 daniel_d
-** Last update Tue May 13 14:07:22 2014 daniel_d
+** Last update Tue May 20 11:41:13 2014 daniel_d
 */
 
 #include "mysh.h"
 
 void	get_sigall()
 {
-  my_printf("\n%s", PROMPT);
+  my_printf("\n$>");
 }
 
 int	signal_set()

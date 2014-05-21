@@ -5,7 +5,7 @@
 ** Login   <le-fra_g@epitech.net>
 ** 
 ** Started on  Mon May 12 15:53:26 2014 le-franc
-** Last update Tue May 20 10:45:24 2014 daniel_d
+** Last update Tue May 20 11:41:26 2014 daniel_d
 */
 
 #ifndef MYSH_H_
@@ -23,8 +23,6 @@
 #include <stdio.h>
 #include <sys/wait.h>
 #include "my.h"
-
-#define PROMPT "$>"
 
 void    usage(char *sh);
 int     shmain(char **env);

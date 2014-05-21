@@ -5,7 +5,7 @@
 ## Login   <daniel_d@epitech.net>
 ## 
 ## Started on  Sun Mar  9 23:33:38 2014 daniel_d
-## Last update Mon May 19 16:37:33 2014 daniel_d
+## Last update Tue May 20 10:58:32 2014 daniel_d
 ##
 
 CC 	= gcc
@@ -18,7 +18,7 @@ NAME	= 42sh
 NORMEC	= python ./norme/.norme.py -nocheat -verbose -score -libc src/*.c
 NORMEH	= python ./norme/.norme.py -nocheat -verbose -score -libc include/*.h
 
-CFLAGS	+= -Wall -Wextra
+CFLAGS	+= -Wall -Wextra -Werror
 CFLAGS	+= -I include/ -L lib -lmy
 
 SRC	= src/main.c \
